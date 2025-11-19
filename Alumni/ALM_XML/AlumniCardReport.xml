@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Alumni_Details>
+    <alumni_name>abhishek</alumni_name>
+    <FileUrl>https://ftp.hpushimla.in/HPU_DOC/Alumni/StuImage/HPU_Alumni_PP__32571a0b-65ff-4e87-9661-e94d3f8807d6_608194_20250114142602694PP_42075119_4917522.jpg</FileUrl>
+    <Files_Unique_Name>HPU_Alumni_PP__32571a0b-65ff-4e87-9661-e94d3f8807d6_608194_20250114142602694PP_42075119_4917522.jpg</Files_Unique_Name>
+    <DeptName>Center of Budhist Studies</DeptName>
+    <degreename>B.Tech.</degreename>
+    <yearofpassing>2013</yearofpassing>
+    <isAuthenticUser>Authenticated User</isAuthenticUser>
+    <ICardBtnPreviewIsVisible>1</ICardBtnPreviewIsVisible>
+    <ICardApprBtnIsVisible>1</ICardApprBtnIsVisible>
+    <CardId>ALM000008</CardId>
+    <QRImg>https://ftp.hpushimla.in/HPU_DOC/Alumni/StuImage/ALM000008.jpeg</QRImg>
+    <AlumniCardLogo>https://alumni.hpushimla.in/alumni/alumin-default-theme/images/alumni-card-logo.jpg</AlumniCardLogo>
+  </Alumni_Details>
+</NewDataSet>

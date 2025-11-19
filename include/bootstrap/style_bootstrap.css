@@ -1,0 +1,175 @@
+.main-content {
+    display:block;
+    width:100%;
+}
+.logo img {
+    float:left;
+}
+.logo {
+    float: left;
+    width: 470px;
+}   
+.uni_name {
+    color: #fff;
+    float: left;
+    font-family: tahoma;
+    font-size: 19px;
+    padding: 24px 0 0 7px;
+    text-shadow: 1px 1px 1px #000;
+    width: 78%;
+}
+.uni_title {
+    float: left;
+    font-size: 12px;
+    width:100%;
+}
+.wrapper {
+    display: inline-block;
+    min-height: 529px;
+    padding: 0 15px 15px;
+    width: 100%;
+}
+.radio, .checkbox {
+    margin:0;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin:0;
+    position:static;
+}
+.radio label, .checkbox label {
+    padding-left: 4px;
+}
+.table-responsive .dwnloadchln td {
+    border:none;
+}
+.table-responsive .dwnloadchln {
+    width:520px;
+    margin-left:24% !important;
+}
+.ugplink {
+    top:33px !important ;
+}
+.stulgn img {
+    margin-left:11%;
+}
+.stulgnbrwsr img  {
+    margin-left:22%;
+}
+
+@media (max-width:640px) and (min-width:320px) {
+  .empheader {
+    height: auto !important;
+    width: 100% !important;
+} 
+  .empheader a {
+      margin:10px 0 10px 10px !important;
+  }
+  .empheader a img {
+      width:275px;
+  }
+  .college_login_bg, .backofficebg {
+      background:#ffffff !important;
+  }
+  .centerpage .codebox {
+      width: 180px;
+  }
+  .container .centerpage {
+    float: left;
+    margin: 10% 0 10% 3% !important;
+    padding: 70px 0 0;
+    width: 297px;
+}
+  .explogologinpg {
+      margin:11px 0 0 30% !important;
+  }
+  .container {
+      width:100% !important;
+  }
+   .logo {
+       text-align:center;
+       width:100%;
+   }
+   .logo img {
+       margin:5px;
+       float:none !important;
+       width:275px;
+   }
+    .uni_name {
+        padding: 0 0 10px;
+        width: 100%;
+    }
+    .middle_section_inner {
+        width: 100% !important;
+    }
+    .middle_section {
+        width: auto !important;
+    }
+    .logoimg {
+        float: left;
+        text-align: center;
+        width: 100%;
+        display:block
+    }
+    .uni_help_no {
+        padding: 10px 0 !important;
+        text-align: center;
+        width: 100% !important;
+    }
+    .explogologinpg_new {
+        margin: 13px 0 0 29% !important;
+    }
+    .emploginbg {
+        background:none !important;
+    }
+   
+    #main {
+        width:100% !important;
+    }
+   
+    .leftwrap-n {
+        margin: 0 0 10px 0 !important;
+    }
+    .afheaderinner {
+        width:100% !important;
+    }
+     .afheaderinner .homelink {
+        margin-top:0 !important;
+    }
+     .affilationloginmain, .leftcol, .rightcol, .mainbodycontentholder, .afloginbody {
+         width:100% !important;
+     }
+     .ugplink {
+         position: static !important;
+     }
+     .popupboxouter, .popupbox {
+         width:100% !important;
+     }
+     .stulgn {
+        margin-left:0%;
+    }
+    .stulgnbrwsr  {
+        margin-left:0%;
+    }
+    .stulgn img, .stulgnbrwsr img {
+        margin:0;
+    }
+    .dateformatbg {
+        width: 100% !important; 
+        padding: 71px 0% 0px 0px !important;  
+        margin-bottom: 25px !important;
+    } 
+    .DivStyleWithScroll {
+        height:235px !important;
+    }
+    .table-responsive .dwnloadchln {
+        width:100%;
+        margin-left:24% !important;
+    }
+    .commonwithblock {
+        margin-right:0 !important;
+        min-height:110px !important;
+    } 
+    .header_pnl_link {
+        padding-top:0 !important;
+    }
+}

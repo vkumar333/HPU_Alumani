@@ -1,0 +1,772 @@
+.vtextaf {
+	text-align: right;
+	font-weight: bold;
+	color:#282828;
+}
+.colon1 { 
+    font-weight: bold;
+    text-align: center; 
+    width: 2%;
+} 
+.bodycontentpart {
+	/*width: 1000px; */ 
+	width: 958px; 
+	margin: 0 auto;
+}
+.affilationloginbg {
+    background: url("../images/aff-login-background-img.jpg") repeat-x scroll 0 90px transparent;
+    
+}
+.contentminheight {
+    background: url("../images/register-pg-bg.png") repeat-y scroll 0 0 transparent;
+    float: left;
+    min-height: 440px; 
+    padding: 20px;
+    width: 918px;
+}
+.affilationmasterpg .tableheading {
+    color: #e69200 !important;
+}
+.affilationheading {
+    background: none repeat scroll 0 0 #b9feff;
+    border: 1px dotted #009799;
+    color: #333 !important;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-top: 8px;
+    text-align: center;
+}
+.contentminheight .textboxmedium, .af-main .textboxmedium {
+	padding:3px;
+	font-size:12px !important;
+	border: 1px solid #555;
+    border-radius: 5px;
+}
+.af-main .textboxmultiline {
+	padding:3px;
+	font-size:12px !important;
+	border: 1px solid #555;
+    border-radius: 5px;
+    width:285px;
+}
+.contentminheight .textboxlong {
+	padding:3px;
+	font-size:12px !important;
+	width:400px;
+	border: 1px solid #555;
+    border-radius: 5px;
+}
+.af-main select, .af-main input[type="text"] {
+	padding:3px;
+	font-size:12px !important;
+	border: 1px solid #555;
+    border-radius: 5px;
+}
+.contentminheight .dropdown {
+    width: 206px;
+    font-size:12px !important;
+    padding:3px;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+.CL_H {
+	font-weight: bold;
+	text-align: center;
+	line-height:25px;
+}
+.CL_Table {
+	padding: 5px;
+	margin: 5px;
+	font-size: 12px;
+}
+.CL_SRno { 
+  width : 2%;
+	height: 30px;
+}
+.CL_Point {
+	width: 48%;
+	height: 30px;
+}
+.CL_Remark {
+	width: 48%;
+	height: 30px;
+}
+/* affiliation login css */
+.affilationloginmain {
+    margin: 0 auto;
+    width: 1000px;
+}
+.afheader {
+    background: url("../images/af-header.png") repeat-x scroll 0 0 transparent;
+    float: left;
+    height: 103px;
+    width: 100%;
+}
+.afheaderinner {
+	margin:0 auto;
+	width:1000px;
+}
+.aflogo {
+    float: left;
+    margin-left:-50px;
+}
+.afheaderinner .homelink {
+    float: right;
+    margin-top: 35px;
+    position: static;
+}
+.afloginbody {
+    float: left;
+    width: 1000px;
+    padding-top:10px;
+}
+.afloginimg {
+    float: left;
+    width: 565px;
+}
+.afloginbody .frmss {
+	width: 407px;
+	float: right;
+}
+.wtrmarklogoname {
+	/*background:#fee9c6;*/
+	text-align:center;
+	float:left;
+	width:100%;
+	padding:10px 0;
+	margin-top:15px;
+}
+.afloginbody h2 {
+	border-bottom:dotted 1px #333;
+	font-size:16px;
+	color:#333 !important;
+	font-weight:bold;
+	padding-bottom:5px;
+	margin-bottom:8px;
+}
+/* End of login page css */
+.bodycontentpart h2 {
+	border-bottom:dotted 1px #333;
+	font-size:18px;
+	color:#333;
+	font-weight:bold;
+	padding-bottom:5px;
+	margin-bottom:12px;
+}
+.af-main {
+	width:970px;
+	margin:0 auto;
+}
+.af-main .header {
+    background: none repeat scroll 0 0;
+    padding: 0;
+    width: 98%;
+}
+.af-main .headerq {
+	background: url("../images/aff-header1.jpg") no-repeat scroll 0 0 transparent;
+	position:relative;
+}
+.af-menu {
+	float:left;
+	padding-top:10px;
+	font-size:13px;
+}
+.af-menu a {
+	color:#fff;
+	font-weight:bold;
+	margin:0 10px;
+}
+.af-menu a:hover {
+    color:#ffd800;
+}
+.af-menu span {
+	color:#fff;
+	font-weight:bold;
+}
+.af-main .wel-txt {
+    color: #fff;
+    padding-right: 10px;
+    padding-top: 7px;
+    text-align: right;
+}
+.af-main .abtus-bt {
+    background: url("../images/hm-tp21.jpg") no-repeat scroll left bottom;
+    float: left;
+    padding: 10px 10px 125px;
+    min-height: 115px;
+    width: 692px;
+}
+.aff-logout-wp {
+    background: url("../images/logout-page.jpg") no-repeat scroll 0 0 transparent;
+    height: 169px;
+    margin: 17% auto 0;
+    padding: 19px 0 0 47px;
+    width: 465px;
+}
+.aff-logout-wp h1 {
+    font-size: 16px;
+}
+.aff-logout-wp .log-ic {
+    background: url("../images/log-ic1.jpg") no-repeat scroll 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    height: 84px;
+    line-height: 25px;
+    margin-left: 10px;
+    margin-top: 30px;
+    padding: 0 0 0 70px;
+    width: 400px;
+}
+.af-main .wr-right {
+    background:none;
+    padding-bottom:20px;
+    border-bottom:none;
+    width: 175px;
+    float:right;
+}
+.af-main .wr-left {
+	width:713px;
+    float:left;
+}
+.IP-logout-wp {
+    background: url("../images/logout-page-inspection.jpg") no-repeat scroll 0 0 transparent;
+    height: 169px;
+    margin: 17% auto 0;
+    padding: 19px 0 0 47px;
+    width: 465px;
+}
+.IP-logout-wp h1 {
+    font-size: 16px;
+}
+.IP-logout-wp .log-ic {
+    background: url("../images/log-ic1.jpg") no-repeat scroll 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    height: 84px;
+    line-height: 25px;
+    margin-left: 10px;
+    margin-top: 30px;
+    padding: 0 0 0 70px;
+    width: 400px;
+}
+.IPwel-txt {
+    color: #fff;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 0;
+    padding-right: 10px;
+    padding-top: 8px;
+    text-align: right;
+    width: 310px;
+}
+.Inspectionmain .headerq {
+    background: url("../images/inspection-header.jpg") no-repeat scroll 0 0 transparent;
+}
+.IPwel-txt {
+    color: #fff;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 0;
+    padding-right: 115px;
+    padding-top: 8px;
+    text-align: right;
+    width: 310px;
+} 
+.Inspectionmain .abtus-bt {
+    background: url("../images/inspection-home-page-img.jpg") no-repeat scroll left bottom;
+    float: left;
+    padding: 10px 10px 325px;
+    width: 692px;
+}
+.af-main .vtext {
+	font-size:12px;
+	text-align:right;
+	font-weight:bold;
+	line-height:25px;
+	vertical-align:top;
+}
+.serialno {
+    color: #000;
+    font-weight: bold;
+    padding-right: 5px;
+    padding-top: 5px;
+    vertical-align: top;
+    width:4%;
+}
+.af-main .radio label {
+    font-size: 12px;
+    color:#333;
+}
+.af-main .btngap {
+	padding:3px;
+}
+.wr-right-head {
+    background:#009799;
+    border-radius:8px;
+    color: #fff;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 10px;
+    margin-bottom: 5px;
+    padding: 10px 8px 11px;
+    width: 94%;
+}
+.formno {
+    background: none repeat scroll 0 0 #009799;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 14px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+.af-main .abtus-tp {
+    background: url("../images/hm-bot2.jpg") no-repeat scroll 0 0;
+    width: 713px;
+}
+.af-main .abtus {
+    background: url("../images/hmbg2.jpg") repeat-y scroll 0 0;
+    width: 713px;
+}
+.hackforfixwith {
+	*width:39%;
+}
+.af-main .uploadfiles {
+	
+}
+.newregister {
+    color: #333;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 138px;
+    text-decoration: underline;
+}
+.chklist td {
+	border: 1px solid #ddd;
+    padding: 2px;
+}
+.chklist td table td {
+	border:none;
+}
+.chklist tr {
+    border-collapse: collapse;
+}
+.af-main .num-ic {
+	vertical-align:top;
+	font-size:12px;
+}
+.affilationlogin {
+	background: url("../images/affilation-bg.jpg") repeat scroll 0 0 #fff9ef;
+}
+.affilationmasterpg {
+	/*background: url("online/affilation-bg1.jpg") repeat scroll 0 0 #fff9ef;
+	background: url("online/af-bg-2.jpg") repeat scroll 0 0 #fff9ef;*/
+	background: url("online/af-bg-3.jpg") repeat scroll 0 0 #16baf7;
+}
+.affilationloginmain .us-ic, .affilationloginmain .ps-ic {
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 6px 6px 6px 20px;
+}
+.affilationlogin .foter {
+    background: none repeat scroll 0 0 #fae7c4;
+    border-top: 1px solid #f6ce83;
+    padding-bottom:5px;
+}
+.af-main-inner {
+    background: url("../images/body-shadow.png") repeat-y scroll 0 0;
+    float: left;
+    padding-left: 9px;
+    width: 100%;
+}
+.affilationmasterpg .thnks {
+	font-size:12px;
+}
+/* custom rightnavtablinkaf css */
+.rightnavtablinkaf {
+	float:left;
+	width:100%;
+	line-height:25px;
+}
+.rightnavtablinkaf ul {
+	margin:0;
+	padding:0;
+}
+.rightnavtablinkaf ul li {
+	float:left;
+	width:100%;
+	margin-bottom:4px;
+	list-style-type: none;
+	font-size:12px;
+	color:#fff;
+	width:180px;
+	background: url("../images/af-nav-bg-tab-link.jpg") no-repeat scroll 0 0 #009799;
+}
+.rightnavtablinkaf ul li.active {
+	float:left;
+	width:100%;
+	margin-bottom:4px;
+	list-style-type: none;
+	font-size:12px;
+	color:#fff;
+	width:180px;
+	background: url("../images/active-tab-bg.jpg") no-repeat scroll 0 0 #f59c00;
+}
+.rightnavtablinkaf ul li.aflinkdisable {
+    padding-bottom: 2px;
+    padding-left: 28px;
+    padding-top: 3px;
+    width: 152px;
+    color: #000;
+    background: url("../images/aflink-disable.jpg") no-repeat scroll 0 0 #d3d3d3;
+}
+
+.rightnavtablinkaf ul li .activeip {
+	float:left;
+	width:100%;
+	list-style-type: none;
+	font-size:12px;
+	color:#fff;
+	width:151px;
+	background: url("../images/active-tab-bg.jpg") no-repeat scroll 0 0 #f59c00;
+}
+.rightnavtablinkaf ul li .activedoublelineip {
+    background: url("../images/active-double-line.jpg") no-repeat scroll 0 0 #f59c00;
+    color: #fff;
+    float: left;
+    font-size: 12px;
+    list-style-type: none;
+    min-height: 55px;
+    width: 151px;
+}
+
+/* css for double line text */
+.rightnavtablinkaf ul li.aflinkdisabledouble {
+    padding-bottom: 2px;
+    padding-left: 28px;
+    padding-top: 3px;
+    width: 152px;
+    line-height:20px;
+    color: #000;
+    min-height:55px;
+    background: url("../images/aflink-disable1.jpg") no-repeat scroll 0 0 #d3d3d3;
+}
+.rightnavtablinkaf ul li.normaldoublelinetab {
+	float:left;
+	width:100%;
+	margin-bottom:4px;
+	list-style-type: none;
+	font-size:12px;
+	min-height:60px;
+	color:#fff;
+    line-height:20px;
+	width:180px;
+	background: url("../images/normal-double-line.jpg") no-repeat scroll 0 0 #009799;
+}
+.rightnavtablinkaf ul li.activedoubleline {
+	float:left;
+	width:100%;
+	margin-bottom:4px;
+	min-height:60px;
+	list-style-type: none;
+	font-size:12px;
+	color:#fff;
+	width:180px;
+	background: url("../images/active-double-line.jpg") no-repeat scroll 0 0 #f59c00;
+}
+.affilationmasterpg {
+    background: url("../images/online.exam.jpg") no-repeat fixed center top / cover;
+}
+/* End of css for double line text */
+
+
+
+
+
+.rightnavtablinkaf ul li.subheadingforaf {
+    background: none repeat scroll 0 0 ;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.rightnavtablinkaf ul li a {
+    color: #fff;
+    float: left;
+    padding: 3px 0 2px 29px; 
+    width: 82%;
+}
+.rightnavtablinkaf h4 {
+    margin-bottom: 5px;
+    color: #e69200 !important;
+}
+/* End of custom rightnavtablinkaf css */
+
+.wr-left .CL_Table h3 {
+    color: #e69200;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.af-main .header-style th {
+    padding: 4px 5px;
+}
+.af-main .item-style td, .af-main .dgitem-style td {
+    border: 1px solid #666;
+    padding: 5px;
+}
+.af-footer {
+    float: left;
+    text-align: center;
+    width: 100%;
+    background: url("online/footer-bg-af.jpg") repeat-x scroll 0 0 ;
+}
+.af-footer .expitlogo {
+    background: url("online/af-footer-txt.png") no-repeat scroll 0 0 ;
+}
+.af-ip-pages input[type="submit"] {
+    background: url("online/btn-bg-af.jpg") repeat-x scroll 0 0 #029dd5;
+    border: 1px solid #0294c9;
+    color: #ffffff;
+    padding: 3px 6px;
+}
+.af-main input[type="submit"], .affilationmasterpg input[type="submit"] {
+    /*background: url("online/btn-bg-af.jpg") repeat-x scroll 0 0 #ff9c00;*/
+    background:#ff9c00;
+    border: 1px solid #e08900;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    height: auto;
+    padding: 2px 6px; 
+}
+.af-ip-pages #lnkbtnForGot, .af-ip-pages .frmss #lnkbtnNewReg {
+    background: url("online/btn-bg-af.jpg") repeat-x scroll 0 0 #029dd5;
+    border: 1px solid #0294c9;
+}
+.linkbtnnew {
+    background: url("online/btn-bg-af.jpg") repeat-x scroll 0 0 #029dd5;
+    border: 1px solid #0294c9;
+    color: #ffffff;
+	float: left;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 20px;
+	padding: 0px 12px; 
+}
+.af-ip-pages .log-btn {
+	background: url("online/af-loginbtn.jpg") no-repeat scroll 2px center transparent !important;
+	font-size: 0;
+    text-align: right;
+}
+.af-ip-pages .homelink a {
+    /*background: none repeat scroll 0 0 ;*/
+    border: medium none;
+    font-size: 12px;
+    font-weight: bold;
+}
+.affilationmasterpg .wr-left h3 span {
+    color: #e69200;
+}
+.affilationmasterpg .wr-left {
+    color: #333;
+}
+.af-ip-pages .white_content-new {
+    border: 2px solid #363636;
+}
+.af-ip-pages .close {
+    background: none repeat scroll 0 0 #363636;
+}
+.afvtexth1rpt {
+    color: #000;
+    font-family: Verdana,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.aff_instruction {
+	float:left;
+	width:100%;
+	list-style-type:none;
+}
+.aff_instruction li {
+    background: url("online/hand_point.png") no-repeat scroll 0 0;
+    border-bottom: 1px dotted #c6c6c6;
+    float: left;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    padding-left: 23px;
+    width: 96%;
+}
+.affilationresult td {
+	border:solid 1px #ddd;
+	padding:5px;
+}
+.affilationresult {
+	background: url("online/affilation-result-txt.jpg") no-repeat scroll center 50%;
+}
+.welcomeaffilation {
+    color: #ffd800;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: right;
+    width: 55%;
+}
+input[type="button"] {
+	background: url("images/btn-bg.jpg") repeat-x scroll 0 center #019cd5;
+	border: 1px solid #0080af;
+	color: #FFFFFF;
+	padding: 3px 6px; 
+	border-radius: 5px;
+	font-size:11px;
+	cursor:pointer;
+}
+input[type="checkbox"] {
+	margin-right:5px;
+}
+.aftablesubheading {
+	background: url("images/sub-heading-bg.jpg") repeat-x scroll left bottom transparent;
+	color: #ff6600 !important;
+	font-size: 12px !important;
+	font-weight:bold;
+	line-height: 23px;
+	padding: 0 0 5px 0 !important;
+}
+.af-main .textboxdate {
+    width: 75px !important;
+}
+.paymentsucess {
+    background: none repeat scroll 0 0 #f3ffe2;
+    border: 1px solid #cbf098;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 2%;
+    text-align: center;
+    width: 95%;
+    line-height: 45px;
+    float:left;
+}
+.paymentsucess span, .paymentcancel span {
+	float:left;
+	width:100%;
+}
+.paymentcancel {
+    background: none repeat scroll 0 0 #ffeeee;
+    border: 1px solid #feadad;
+    border-radius: 10px;
+    float: left;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 45px;
+    padding: 2%;
+    text-align: center;
+    width: 95%;
+}
+.logo {
+	float:left;
+}
+.chkborder {
+    border: 1px solid #ccc;
+    float: left;
+    width: 98%;
+}
+/* yougeshvar css */
+
+.tblOutlook {
+	padding: 10px;
+	margin: 20px;
+}
+.colSrno {
+	width: 1%;
+	vertical-align: top;
+	color: #FF3300;
+	font-size: 12px;
+	font-weight: bolder;
+}
+.colpoint {
+	width: 40%;
+	padding: 1px;
+	margin: 1px;
+	vertical-align: top;
+	text-align: left;
+	color: #000000;
+}
+.pointgap {
+	width: 1%;
+	vertical-align: top;
+	text-align: center;
+}
+.colpoint2 {
+	width: 40%;
+	padding: 1px;
+	margin: 1px;
+	vertical-align: top;
+	text-align: left;
+	color: #663300;
+}
+/* End of yougeshvar css */
+.tenderpg .vtext {
+	font-size:12px !important;
+}
+.tenderpg select, .af-main input[type="text"] {
+    font-size: 12px !important;
+}
+.tenderpg .radio label {
+    font-size: 12px !important;
+}
+.tenderpg .pager-style td {
+	border:none;
+}
+.tenderpg input[type="submit"] {
+    font-size: 12px !important;
+}
+.tenderpg .uploadfiles {
+    border: none !important;
+    font-size: 11px !important;
+}
+.tenderslogin {
+	background: url("online/h-t-bg.png") repeat scroll 0 0;
+	padding: 10px; 
+	width: 280px !important; 
+	border: 1px dotted #333;
+	min-height:400px; 
+}
+.studentblform {
+	margin-top:20px !important;
+}
+.studentblform td { 
+	padding:3px;
+}
+.centerpage.opcitydwnbg {
+    background: url("../images/login-tp-1.png") repeat scroll 0 0;
+}
+.loginfooter {
+    background: url("../images/login-footer.jpg") repeat-x scroll 0 0 transparent;
+    float: left;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+    margin-top:10px;
+}
+.explogologinpg {
+    background: url("../images/iti.png") no-repeat scroll 0 0 transparent;
+    color: #666666;
+    float: left;
+    font-size: 0;
+    height: 23px;
+    margin: 11px 0 0 43%;
+    text-align: right;
+    width: 142px;
+}
+/*.affilationmasterpg .bodywrap {
+    padding-bottom:0;
+}*/

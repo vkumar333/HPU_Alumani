@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Card</title>
+    <style>
+        .card {
+            width: 290px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding:0;
+        }
+        .headers {
+            background-color: #0a433d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+			min-height: 120px;
+        }
+        <!-- .header img { -->
+            <!-- height: 60px; -->
+            <!-- margin: 5px; -->
+        <!-- } -->
+        .avatar {
+            display: flex;
+            justify-content: center;
+            margin:0;
+			margin-top: -55px;
+        }
+        .avatar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+			border: 3px solid #fff;
+        }
+        .details {
+            text-align: center;
+            padding: 10px;
+			margin-bottom: 15px;
+        }
+        .details h2 {
+            margin: 10px 0 5px;
+            font-size: 20px;
+			font-weight:500;
+        }
+        .details p {
+            margin: 7px;
+            color: #555;
+			font-size: 13px;
+			text-align:left;
+        }
+		.alumni-class {
+			text-align:center!important;
+			margin-bottom:20px!important;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #424242;
+            border-top: 1px solid #ddd;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 12px;
+            color: #fff;
+        }
+        .footer img {
+            width: 50px;
+        }
+		.img-responsive {
+    display: block;
+    max-width: 100%;
+		}
+		 /* Print-specific styles */
+        @media print {
+            body {
+                background-color: white; /* Ensures the card doesn't blend into page background */
+				/*border: 1px solid #ddd;*/
+            }
+            .card {
+                box-shadow: none; /* Removes shadow for print */
+                border: 1px solid #ddd;
+            }
+            .headers {
+                background-color: #0a433d !important; /* Ensures background is visible */
+                color: white;
+                -webkit-print-color-adjust: exact; /* Ensures colors are printed */
+            }
+            .footer {
+                background-color: #424242 !important;
+                -webkit-print-color-adjust: exact; /* Ensures colors are printed */
+            }
+			.footer p {
+           
+            font-size: 12px;
+            color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="card">
+        <div class="headers">
+            <img class="img-responsive" src="https://alumni.hpushimla.in/Alumni/alumin-default-theme/images/alumni-card-logo.jpg" alt="Alumni Association Logo">
+        </div>
+        <div class="avatar">
+            <img src="https://ftp.hpushimla.in/HPU_DOC/Alumni/StuImage/HPU_Alumni_PP__c453e8b9-bc08-4f45-b0dd-c6612ed194f6_286176_20240625155442755PP_154126382_13668264.jpg" alt="Avatar">
+        </div>
+        <div class="details">
+            <h2>Nishat Tripathi</h2>
+            <p Class="alumni-class">Alumni, Class of 2021</p>
+            <p>Course/Degree: MCA</p>
+            <p>Division/Department: </p>
+        </div>
+        <div class="footer">
+            <p>CARDID: ALM000005 <br>ALUMNI.HPUSHIMLA.IN </p>
+            <img src="https://ftp.hpushimla.in/HPU_DOC/Alumni/StuImage/ALM000005.jpeg" alt="QR Code" style="float: right; height: 70px; width: 70px;">
+        </div>
+    </div>-->
+
+    <div class="card">
+        <div class="headers">
+            <img class="img-responsive" src="{{logoUrl}}" alt="Alumni Association Logo">
+        </div>
+        <div class="avatar">
+            <img src="{{ImageUrl}}" alt="Avatar">
+        </div>
+        <div class="details">
+            <h2>{{alumniName}} </h2>
+            <p Class="alumni-class">Alumni, Class of {{passingYear}} </p>
+            <p>Course/Degree: {{Degree}} </p>
+            <p>Division/Department: {{Department}} </p>
+        </div>
+        <div class="footer">
+            <p>CARDID: {{CardNo}} <br> ALUMNI.HPUSHIMLA.IN </p>
+            <img src="{{ImageQR}}" alt="QR Code" style="float: right; height: 70px; width: 70px;">
+        </div>
+    </div>
+
+</body>
+</html>

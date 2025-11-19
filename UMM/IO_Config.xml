@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<IO_Configuration>
+  <!--Localhost-->
+  <Server_Details>
+    <Server_Ip>localhost</Server_Ip>
+    <!--<Physical_Path>D:</Physical_Path>-->
+    <Physical_Path>D:\PLACEMENT_DATA\Company_Profile</Physical_Path>
+    <!--<http_Add>sdfg</http_Add>-->
+  </Server_Details>
+  University Server Public IP
+  <Server_Details>
+    <Server_Ip>52.172.15.68</Server_Ip>
+    <Physical_Path>L:\Published_APP\FTPSITE\HPU_DOC</Physical_Path>
+    <http_Add>http://52.172.15.68/FTPSITE/HPU_DOC/</http_Add>
+    <!--<http_Add>https://image.hpushimla.in/HPU_DOC/</http_Add>-->
+  </Server_Details>
+
+  <Server_Details>
+    <Server_Ip>admissions.hpushimla.in</Server_Ip>
+    <Physical_Path>L:\Published_APP\FTPSITE\HPU_DOC</Physical_Path>
+    <!--<http_Add>http://52.172.15.68/FTPSITE/HPU_DOC/</http_Add>-->
+    <http_Add>https://image.hpushimla.in/HPU_DOC/</http_Add>
+  </Server_Details>
+
+  <Server_Details>
+    <Server_Ip>www.admissions.hpushimla.in</Server_Ip>
+    <Physical_Path>L:\Published_APP\FTPSITE\HPU_DOC</Physical_Path>
+    <!--<http_Add>http://52.172.15.68/FTPSITE/HPU_DOC/</http_Add>-->
+    <http_Add>https://image.hpushimla.in/HPU_DOC/</http_Add>
+  </Server_Details>
+
+  <Server_Details>
+    <Server_Ip>exams.hpushimla.in</Server_Ip>
+    <Physical_Path>L:\Published_APP\FTPSITE\HPU_DOC</Physical_Path>
+    <http_Add>http://52.172.15.68/FTPSITE/HPU_DOC/</http_Add>
+  </Server_Details>
+
+  <Server_Details>
+    <Server_Ip>hpushimla.in</Server_Ip>
+    <Physical_Path>L:\Published_APP\FTPSITE\HPU_DOC\</Physical_Path>
+    <http_Add>http://52.172.15.68/FTPSITE/HPU_DOC/</http_Add>
+  </Server_Details>
+
+  <Server_Details>
+    <Server_Ip>backoffice.hpushimla.in</Server_Ip>
+    <Physical_Path>F:\Published_APP\hpu_ftpbackoffice_LIVE\</Physical_Path>
+    <http_Add>https://ftpbackoffice.hpushimla.in/</http_Add>
+  </Server_Details>
+  
+  <!-- <Server_Details> -->
+    <!-- <Server_Ip>alumni.hpushimla.in</Server_Ip> -->
+    <!-- <Physical_Path>L:\Published_APP\FTPSITE\HPU_DOC\</Physical_Path> -->
+    <!-- <http_Add>https://ftp.hpushimla.in/HPU_DOC/</http_Add> -->
+  <!-- </Server_Details> -->
+  
+     <Server_Details>
+    <Server_Ip>alumni.hpushimla.in</Server_Ip>
+    <Physical_Path>F:\Published_APP\hpu_ftpbackoffice_LIVE\</Physical_Path>
+    <http_Add>https://ftpbackoffice.hpushimla.in</http_Add>
+	
+  </Server_Details>
+
+  <Server_Details>
+    <Server_Ip>payroll.hpushimla.in</Server_Ip>
+    <Physical_Path>L:\Published_APP\FTPSITE\HPU_DOC</Physical_Path>
+    <http_Add>http://52.172.15.68/FTPSITE/HPU_DOC/</http_Add>
+  </Server_Details>
+
+</IO_Configuration>

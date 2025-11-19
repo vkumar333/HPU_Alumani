@@ -1,0 +1,842 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AlumniMasterPage.master.cs" Inherits="Alumni_AlumniMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <title>ALUMNI :: PORTAL</title>
+    <meta name="description" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/rsmenu-main.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/fonts/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/fonts/fonts2/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/off-canvas.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/style.css?=1">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="Alumni/alumin-default-theme/css/magnific-popup.css">
+
+    <%--<title>Alumni</title>
+    <meta name="description" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="alumin-default-theme/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/rsmenu-main.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/fonts/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/off-canvas.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/responsive.css">
+    <link href="alumin-default-theme/style.css?=1" rel="stylesheet"  />--%>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .top {
+            padding: 10px 0;
+            background: #1d544f;
+            background: -moz-linear-gradient(-65deg, #1d544f 0, #206845 100%);
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1d544f), color-stop(100%, #206845));
+            background: -webkit-linear-gradient(-65deg, #1d544f 0, #206845 100%);
+            background: -o-linear-gradient(-65deg, #1d544f 0, #206845 100%);
+            background: -ms-linear-gradient(-65deg, #1d544f 0, #206845 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1d544f', endColorstr='#206845', GradientType=1);
+            background-size: 400% 400%;
+            /*animation: gradient 15s ease infinite;*/
+        }
+
+            .top .top-left {
+                /*padding: 4px 0 0;*/
+                text-align: left;
+            }
+
+        .top-left li {
+            display: inline-block;
+            color: #fff;
+            margin-right: 2em;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+
+        .top-left i.fa {
+            margin-right: 2px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .top-left li a {
+            color: #fff;
+        }
+
+        .top .top-middle, .top .top-right {
+            padding: 0px;
+        }
+
+        .top-middle {
+            text-align: right;
+        }
+
+            .top-middle li {
+                margin-right: 15px;
+                display: inline-block;
+            }
+
+        .home-style2 .top-middle i.fa {
+            border: 1px solid #fff;
+            color: #fff !important;
+            transition: 0.5s all;
+            -webkit-transition: 0.5s all;
+            -moz-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            -ms-transition: 0.5s all;
+        }
+
+        .top-middle .fa-whatsapp, .top-middle .fa-twitter, .top-middle .fa-facebook, .top-middle .fa-linkedin, .top-middle .fa-youtube {
+            font-size: 16px;
+            text-align: center;
+            line-height: 29px;
+            width: 30px;
+            height: 30px;
+        }
+
+            .top-middle .fa-facebook:hover {
+                background: #527dbd;
+                color: #ececec;
+                border: 1px solid #527dbd !important;
+            }
+
+            .top-middle .fa-whatsapp:hover {
+                background: #4caf50;
+                color: #ececec;
+                border: 1px solid #4caf50 !important;
+            }
+
+            .top-middle .fa-twitter:hover {
+                background: #1da1f2;
+                color: #ececec;
+                border: 1px solid #1da1f2 !important;
+            }
+
+            .top-middle .fa-linkedin:hover {
+                background: #0077b5;
+                color: #ececec;
+                border: 1px solid #0077b5 !important;
+            }
+
+            .top-middle .fa-youtube:hover {
+                background: #FF0000;
+                color: #ececec;
+                border: 1px solid #FF0000 !important;
+            }
+
+        @media only screen and (min-width: 290px) and (max-width: 769px) {
+            .top-left li {
+                font-size: 15px;
+                margin-right: 0;
+            }
+
+            .top .top-left, .top-middle {
+                text-align: center;
+            }
+
+            .top-middle {
+                margin: 10px 0;
+            }
+        }
+    </style>
+
+</head>
+
+<!--<script type="text/javascript">
+    // Broadcast that you're opening a page.
+    localStorage.openpages = Date.now();
+    var onLocalStorageEvent = function (e) {
+        if (e.key == "openpages") {
+            // Listen if anybody else is opening the same page!
+            localStorage.page_available = Date.now();
+        }
+        if (e.key == "page_available") {
+            alert("Application is already running in another Tab.");
+            open(location, '_self').close();
+            close();
+        }
+    };
+    window.addEventListener('storage', onLocalStorageEvent, false);
+</script>
+
+<script type="text/javascript">
+
+    var IntervalVal;
+    $(function () {
+
+        var chatHub = $.connection.chatHub;
+        debugger;
+        registerClientMethods(chatHub);
+        // Start Hub
+        $.connection.hub.start().done(function () {
+
+            registerEvents(chatHub)
+
+        });
+
+        // Reset Message Counter on Hover
+        $("#divChatWindow").mouseover(function () {
+
+            $("#MsgCountMain").html('0');
+            $("#MsgCountMain").attr("title", '0 New Messages');
+        });
+
+        // Stop Title Alert
+        //window.onfocus = function (event) {
+        //    if (event.explicitOriginalTarget === window) {
+        //        clearInterval(IntervalVal);
+        //        document.title = 'SignalR Chat App';
+        //    }
+        //}
+
+    });
+
+    // Show Title Alert
+    function ShowTitleAlert(newMessageTitle, pageTitle) {
+        if (document.title == pageTitle) {
+            document.title = newMessageTitle;
+        }
+        else {
+            document.title = pageTitle;
+        }
+    }
+
+       <%-- function registerEvents(chatHub) {           
+             var name = '<%= UserName %>';            
+            if (name.length > 0) {
+                chatHub.server.connect(name);
+            }--%>
+
+    // Clear Chat
+    $('#btnClearChat').click(function () {
+
+        var msg = $("#divChatWindow").html();
+
+        if (msg.length > 0) {
+            chatHub.server.clearTimeout();
+            $('#divChatWindow').html('');
+
+        }
+    });
+
+    // Send Button Click Event
+    $('#btnSendMsg').click(function () {
+
+        var msg = $("#txtMessage").val();
+
+        if (msg.length > 0) {
+
+            var userName = $('#hdUserName').val();
+
+            var date = GetCurrentDateTime(new Date());
+
+            chatHub.server.sendMessageToAll(userName, msg, date);
+            $("#txtMessage").val('');
+        }
+    });
+
+    // Send Message on Enter Button
+    $("#txtMessage").keypress(function (e) {
+        if (e.which == 13) {
+            $('#btnSendMsg').click();
+        }
+    });
+
+
+    function registerClientMethods(chatHub) {
+
+
+        // Calls when user successfully logged in
+        chatHub.client.onConnected = function (id, userName, allUsers, messages, times) {
+
+            $('#hdId').val(id);
+            $('#hdUserName').val(userName);
+            $('#spanUser').html(userName);
+
+            // Add All Users
+            for (i = 0; i < allUsers.length; i++) {
+
+                AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName, allUsers[i].UserImage, allUsers[i].LoginTime);
+            }
+
+            // Add Existing Messages
+            for (i = 0; i < messages.length; i++) {
+                AddMessage(messages[i].UserName, messages[i].Message, messages[i].Time, messages[i].UserImage);
+
+            }
+        }
+
+        // On New User Connected
+        chatHub.client.onNewUserConnected = function (id, name, UserImage, loginDate) {
+            AddUser(chatHub, id, name, UserImage, loginDate);
+        }
+
+        // On User Disconnected
+        chatHub.client.onUserDisconnected = function (id, userName) {
+
+            $('#Div' + id).remove();
+
+            var ctrId = 'private_' + id;
+            $('#' + ctrId).remove();
+
+            var disc = $('<div class="disconnect">"' + userName + '" logged off.</div>');
+
+            $(disc).hide();
+            $('#divusers').prepend(disc);
+            $(disc).fadeIn(200).delay(2000).fadeOut(200);
+
+        }
+
+        chatHub.client.messageReceived = function (userName, message, time, userimg) {
+
+            AddMessage(userName, message, time, userimg);
+
+            // Display Message Count and Notification
+            var CurrUser1 = $('#hdUserName').val();
+            if (CurrUser1 != userName) {
+
+                var msgcount = $('#MsgCountMain').html();
+                msgcount++;
+                $("#MsgCountMain").html(msgcount);
+                $("#MsgCountMain").attr("title", msgcount + ' New Messages');
+                var Notification = 'New Message From ' + userName;
+                IntervalVal = setInterval("ShowTitleAlert('SignalR Chat App', '" + Notification + "')", 800);
+
+            }
+        }
+
+        chatHub.client.sendPrivateMessage = function (windowId, fromUserName, message, userimg, CurrentDateTime) {
+
+            var ctrId = 'private_' + windowId;
+            if ($('#' + ctrId).length == 0) {
+
+                OpenPrivateChatBox(chatHub, windowId, ctrId, fromUserName, userimg);
+
+            }
+
+            var CurrUser = $('#hdUserName').val();
+            var Side = 'right';
+            var TimeSide = 'left';
+
+            if (CurrUser == fromUserName) {
+                Side = 'left';
+                TimeSide = 'right';
+
+            }
+            else {
+                var Notification = 'New Message From ' + fromUserName;
+                IntervalVal = setInterval("ShowTitleAlert('SignalR Chat App', '" + Notification + "')", 800);
+
+                var msgcount = $('#' + ctrId).find('#MsgCountP').html();
+                msgcount++;
+                $('#' + ctrId).find('#MsgCountP').html(msgcount);
+                $('#' + ctrId).find('#MsgCountP').attr("title", msgcount + ' New Messages');
+            }
+
+            var divChatP = '<div class="direct-chat-msg ' + Side + '">' +
+                '<div class="direct-chat-info clearfix">' +
+                '<span class="direct-chat-name pull-' + Side + '">' + fromUserName + '</span>' +
+                '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + CurrentDateTime + '</span>' +
+                '</div>' +
+
+                ' <img class="direct-chat-img" src="' + userimg + '" alt="Message User Image">' +
+                ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+            $('#' + ctrId).find('#divMessage').append(divChatP);
+
+            var htt = $('#' + ctrId).find('#divMessage')[0].scrollHeight;
+            $('#' + ctrId).find('#divMessage').slimScroll({
+                height: htt
+            });
+        }
+
+    }
+
+    function GetCurrentDateTime(now) {
+
+        var localdate = dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+
+        return localdate;
+    }
+
+    function AddUser(chatHub, id, name, UserImage, date) {
+
+        var userId = $('#hdId').val();
+
+        var code, Clist;
+        if (userId == id) {
+
+            code = $('<div class="box-comment">' +
+                '<img class="img-circle img-sm" src="' + UserImage + '" alt="User Image" />' +
+                ' <div class="comment-text">' +
+                '<span class="username">' + name + '<span class="text-muted pull-right">' + date + '</span>  </span></div></div>');
+
+            Clist = $(
+                '<li style="background:#494949;">' +
+                '<a href="#">' +
+                '<img class="contacts-list-img" src="' + UserImage + '" alt="User Image" />' +
+
+                ' <div class="contacts-list-info">' +
+                ' <span class="contacts-list-name" id="' + id + '">' + name + ' <small class="contacts-list-date pull-right">' + date + '</small> </span>' +
+                ' <span class="contacts-list-msg">How have you been? I was...</span></div></a > </li >');
+        }
+        else {
+
+            code = $('<div class="box-comment" id="Div' + id + '">' +
+                '<img class="img-circle img-sm" src="' + UserImage + '" alt="User Image" />' +
+                ' <div class="comment-text">' +
+                '<span class="username">' + '<a id="' + id + '" class="user" >' + name + '<a>' + '<span class="text-muted pull-right">' + date + '</span>  </span></div></div>');
+
+
+            Clist = $(
+                '<li>' +
+                '<a href="#">' +
+                '<img class="contacts-list-img" src="' + UserImage + '" alt="User Image" />' +
+
+                ' <div class="contacts-list-info">' +
+                '<span class="contacts-list-name" id="' + id + '">' + name + ' <small class="contacts-list-date pull-right">' + date + '</small> </span>' +
+                ' <span class="contacts-list-msg">How have you been? I was...</span></div></a > </li >');
+
+
+            var UserLink = $('<a id="' + id + '" class="user" >' + name + '<a>');
+            $(code).click(function () {
+
+                var id = $(UserLink).attr('id');
+
+                if (userId != id) {
+                    var ctrId = 'private_' + id;
+                    OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                }
+
+            });
+
+            var link = $('<span class="contacts-list-name" id="' + id + '">');
+            $(Clist).click(function () {
+
+                var id = $(link).attr('id');
+
+                if (userId != id) {
+                    var ctrId = 'private_' + id;
+                    OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                }
+
+            });
+
+        }
+
+        $("#divusers").append(code);
+
+        $("#ContactList").append(Clist);
+
+    }
+
+    function AddMessage(userName, message, time, userimg) {
+
+        var CurrUser = $('#hdUserName').val();
+        var Side = 'right';
+        var TimeSide = 'left';
+
+        if (CurrUser == userName) {
+            Side = 'left';
+            TimeSide = 'right';
+
+        }
+
+        var divChat = '<div class="direct-chat-msg ' + Side + '">' +
+            '<div class="direct-chat-info clearfix">' +
+            '<span class="direct-chat-name pull-' + Side + '">' + userName + '</span>' +
+            '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + time + '</span>' +
+            '</div>' +
+
+            ' <img class="direct-chat-img" src="' + userimg + '" alt="Message User Image">' +
+            ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+        $('#divChatWindow').append(divChat);
+
+        var height = $('#divChatWindow')[0].scrollHeight;
+        $('#divChatWindow').scrollTop(height);
+
+    }
+
+    // Creation and Opening Private Chat Div
+    function OpenPrivateChatBox(chatHub, userId, ctrId, userName) {
+
+        var PWClass = $('#PWCount').val();
+
+        if ($('#PWCount').val() == 'info')
+            PWClass = 'danger';
+        else if ($('#PWCount').val() == 'danger')
+            PWClass = 'warning';
+        else
+            PWClass = 'info';
+
+        $('#PWCount').val(PWClass);
+        var div1 = ' <div class="col-md-4"> <div  id="' + ctrId + '" class="box box-solid box-' + PWClass + ' direct-chat direct-chat-' + PWClass + '">' +
+            '<div class="box-header with-border">' +
+            ' <h3 class="box-title">' + userName + '</h3>' +
+
+            ' <div class="box-tools pull-right">' +
+            ' <span data-toggle="tooltip" id="MsgCountP" title="0 New Messages" class="badge bg-' + PWClass + '">0</span>' +
+            ' <button type="button" class="btn btn-box-tool" data-widget="collapse">' +
+            '    <i class="fa fa-minus"></i>' +
+            '  </button>' +
+            '  <button id="imgDelete" type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button></div></div>' +
+
+            ' <div class="box-body">' +
+            ' <div id="divMessage" class="direct-chat-messages">' +
+
+            ' </div>' +
+
+            '  </div>' +
+            '  <div class="box-footer">' +
+
+
+            '    <input type="text" id="txtPrivateMessage" name="message" placeholder="Type Message ..." class="form-control"  />' +
+
+            '  <div class="input-group">' +
+            '    <input type="text" name="message" placeholder="Type Message ..." class="form-control" style="visibility:hidden;" />' +
+            '   <span class="input-group-btn">' +
+            '          <input type="button" id="btnSendMessage" class="btn btn-' + PWClass + ' btn-flat" value="send" />' +
+            '   </span>' +
+            '  </div>' +
+
+            ' </div>' +
+            ' </div></div>';
+        var $div = $(div1);
+        // Closing Private Chat Box
+        $div.find('#imgDelete').click(function () {
+            $('#' + ctrId).remove();
+        });
+
+        // Send Button event in Private Chat
+        $div.find("#btnSendMessage").click(function () {
+
+            $textBox = $div.find("#txtPrivateMessage");
+
+            var msg = $textBox.val();
+            if (msg.length > 0) {
+                chatHub.server.sendPrivateMessage(userId, msg);
+                $textBox.val('');
+            }
+        });
+
+        // Text Box event on Enter Button
+        $div.find("#txtPrivateMessage").keypress(function (e) {
+            if (e.which == 13) {
+                $div.find("#btnSendMessage").click();
+            }
+        });
+
+        // Clear Message Count on Mouse over           
+        $div.find("#divMessage").mouseover(function () {
+
+            $("#MsgCountP").html('0');
+            $("#MsgCountP").attr("title", '0 New Messages');
+        });
+        // Append private chat div inside the main div
+        $('#PriChatDiv').append($div);
+    }
+	
+</script>-->
+
+<body class="home-style2 defult-home home2">
+    <form id="form1" runat="server">
+        <!--Full width header Start-->
+        <div class="full-width-header">
+            <!--Header Start-->
+            <header id="rs-header" class="rs-header">
+                <div class="top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-9 top-left">
+                                <ul>
+
+                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:hpualumniassociation@gmail.com">hpualumniassociation@gmail.com</a></li>
+                                    <li><i class="fa fa-globe" aria-hidden="true"></i><a href="https://www.hpuniv.ac.in" target="_blank">www.hpuniv.ac.in</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 top-middle">
+                                <ul>
+                                    <%--<li><a id="membershipLink" href="../Alumin_Loginpage.aspx"><span style="color: white;">MEMBERSHIP </span></a></li>--%>
+                                    <li><a id="facebookLink" href="#" runat="server"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a id="twitterLink" href="#" runat="server"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a id="linkedInLink" href="#" runat="server"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a id="youtubeLink" href="#" runat="server"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Top Start -->
+                <div class="rs-header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="logo-area text-center">
+                                    <a href="https://alumni.hpushimla.in/Alumni/Alm_Default.aspx">
+                                        <img class="img-fluid mx-auto" style="width: 750px;" src="alumin-default-theme/images/lite-logo.png" alt="HPU">
+                                    </a>
+                                </div>
+                            </div>
+                            <%-- <div class="col-lg-6 col-md-12">
+                                <div class="logo-area">
+                                    <a href="#">&nbsp;
+                                        <img class="pull-right" src="alumin-default-theme/images/lite-logo2.png" alt="logo">
+                                    </a>
+                                </div>
+                            </div>--%>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Top End -->
+                <!-- Menu Start -->
+                <div class="menu-area menu-sticky">
+                    <div class="container-fluid">
+                        <div class="main-menu">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- <div id="logo-sticky" class="text-center">
+                                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                                </div> -->
+                                    <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+                                            <li class="menu-item-has-children">
+                                                <a href="Alm_FundDonationlist.aspx">Contribution</a>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="Alm_Default.aspx">Home</a>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="Alm_NewsandStoriesList.aspx">News & Stories</a>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Events <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="Alm_Events_List.aspx">Events</a> </li>
+                                                    <li><a href="ALM_Gallery_Lists.aspx">Galleries</a> </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Members <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="Alm_alumni_Batchmates.aspx">Batchmates</a> </li>
+                                                    <li><a href="ALM_Chapters.aspx">Chapters</a> </li>
+                                                </ul>
+                                            </li>
+
+                                            <%--<li class="menu-item-has-children">
+                                                <a href="Alm_alumni_Batchmates.aspx">Batchmates </a>
+                                            </li>--%>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Find Alumni <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="Alm_Alumni_Directory.aspx">Alumni Directory</a> </li>
+                                                    <li><a href="ALM_Near_by_Alumni.aspx">Alumni Nearby</a> </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="../Alumin_Loginpage.aspx">Mentorship </a></li>
+                                                    <li><a href="Alm_FundDonationlist.aspx">Fundraising </a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="#">CAREERS <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="../Alumni/ALM_Published_Internships.aspx">Internships </a></li>
+                                                    <li><a href="../Alumni/ALM_Published_Jobs.aspx">Jobs </a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="#">About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="Alm_About.aspx">About Us</a></li>
+                                                    <li><a href="Memorandom_upload.aspx">Memorandum of Association</a></li>
+                                                    <li><a href="Alm_show_Registration_Certificate.aspx">Registration Certificate</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item-has-children current-menu-item">
+                                                <a href="../Alumin_Loginpage.aspx">Sign up/Login</a>
+                                            </li>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="../Alumin_Loginpage.aspx">Membership</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="login-signup-btn homebtn" style="top: 0px; display: none;">
+                                        <Anthem:LinkButton ID="LinkButton1" class="fa fa-home" aria-hidden="true" runat="server" AutoUpdateAfterCallBack="true" OnClick="LinkButton1_Click" Text=""></Anthem:LinkButton>
+                                    </div>
+                                    <div class="login-signup-btn secondbtn" style="left: 53px; display: none;">
+                                        <Anthem:LinkButton ID="login" runat="server" AutoUpdateAfterCallBack="true" OnClick="login_Click" Text=""></Anthem:LinkButton>
+
+                                    </div>
+                                    <div class="right-bar-icon rs-offcanvas-link custom text-right" style="display: none;">
+                                        <a id="nav-expander" class="nav-expander"><i class="fa fa-bars fa-lg white"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu End -->
+            </header>
+            <!--Header End-->
+        </div>
+        <!--Full width header End-->
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%--<p class="copyright">
+            <img src="alumin-default-theme/images/manage-iti.png">
+        </p>--%>
+        <!-- Canvas Menu start -->
+        <nav class="right_menu_togle">
+            <div class="close-btn"><span id="nav-close" class="text-center">x</span></div>
+            <!--<div class="canvas-logo">
+            <a href="index.html"><img src="images/lite-logo.png" alt="logo"></a>
+        </div>-->
+            <ul class="sidebarnav_menu list-unstyled main-menu">
+                <li class="menu-item-has-children"><a href="#">Contribution</a></li>
+                <li class="current-menu-item menu-item-has-children">
+                    <a href="Alm_Default.aspx">Home</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="Alm_NewsandStoriesList.aspx">News & Stories</a>
+                </li>
+                <li class="menu-item-has-children menu-item-has-children-dropdown">
+                    <a href="#">Events</a>
+                    <ul class="list-unstyled">
+                        <li class="sub-nav active"><a href="Alm_Events_List.aspx">Events<span class="icon"></span></a></li>
+                        <li class="sub-nav"><a href="ALM_Gallery_Lists.aspx">Galleries<span class="icon"></span></a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children menu-item-has-children-dropdown">
+                    <a href="#">Members</a>
+                    <ul class="list-unstyled">
+                        <%--<li class="sub-nav"><a href="../Alumin_Loginpage.aspx">Membership <span class="icon"></span></a></li>--%>
+                        <li class="sub-nav active"><a href="Alm_alumni_Batchmates.aspx">Batchmates <span class="icon"></span></a></li>
+                        <li class="sub-nav"><a href="ALM_Chapters.aspx">Chapters <span class="icon"></span></a></li>
+                    </ul>
+                </li>
+                <%--<li class="menu-item-has-children">
+                    <a href="Alm_alumni_Batchmates.aspx">Batchmates</a>
+                </li>--%>
+                <%--<li class="menu-item-has-children menu-item-has-children-dropdown">
+                <a href="Alm_alumni_Batchmates.aspx">Batchmates </a>
+                <ul class="list-unstyled">--%>
+                <%-- <li class="sub-nav"><a href="Alm_alumni_Batchmates.aspx">Yearbook<span class="icon"></span></a></li>--%>
+                <%--  <li class="sub-nav"><a href="#">Courses Two<span class="icon"></span></a></li>--%>
+                <%-- </ul>
+            </li>--%>
+                <li>
+                    <a href="Alm_Alumni_Directory.aspx">ALUMNI DIRECTORY</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="ALM_Near_by_Alumni.aspx">ALUMNI NEARBY</a>
+                </li>
+                <%-- <li class="menu-item-has-children menu-item-has-children-dropdown">
+                <a href="ALM_Near_by_Alumni.aspx">Find Alumni </a>
+                <ul class="list-unstyled">--%>
+                <%-- <li class="sub-nav"><a href="#">Alumni Directory<span class="icon"></span></a></li>--%>
+                <%--<li class="sub-nav"><a href="ALM_Near_by_Alumni.aspx">Alumni Nearby<span class="icon"></span></a></li>--%>
+                <%--<<%--/ul>--%>
+                <%--   </li>--%>
+                <%-- <li class="menu-item-has-children menu-item-has-children-dropdown">
+                <a href="#">Careers </a>
+                <ul class="list-unstyled">
+                    <li class="sub-nav"><a href="#">Jobs<span class="icon"></span></a></li>
+                    <li class="sub-nav"><a href="#">Internship<span class="icon"></span></a></li>
+                </ul>
+            </li>--%>
+                <li class="menu-item-has-children menu-item-has-children-dropdown">
+                    <a href="#">Services  </a>
+                    <ul class="list-unstyled">
+                        <%-- <li class="sub-nav"><a href="#">Mentorship<span class="icon"></span></a></li>--%>
+                        <li class="sub-nav"><a href="Alm_FundDonationlist.aspx">FUNDRAISING<span class="icon"></span></a></li>
+                        <li class="sub-nav"><a href="../Alumin_Loginpage.aspx">Mentorships <span class="icon"></span></a></li>
+                        <%--<li class="sub-nav"><a href="#">SPECIAL INTEREST GROUPS<span class="icon"></span></a></li>--%>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children menu-item-has-children-dropdown">
+                    <a href="#">CAREERS  </a>
+                    <ul class="list-unstyled">
+                        <li class="sub-nav"><a href="../Alumni/ALM_Published_Internships.aspx">INTERNSHIPS <span class="icon"></span></a></li>
+                        <li class="sub-nav"><a href="../Alumni/ALM_Published_Jobs.aspx">JOBS <span class="icon"></span></a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children menu-item-has-children-dropdown">
+                    <a href="#">About </a>
+                    <ul class="list-unstyled">
+                        <li class="sub-nav"><a href="Alm_About.aspx">About Us<span class="icon"></span></a></li>
+                        <%--    <li class="sub-nav"><a href="#">Alumni Team Members<span class="icon"></span></a></li>--%>
+                        <li class="sub-nav"><a href="Memorandom_upload.aspx">Memorandum of Association<span class="icon"></span></a></li>
+                        <li class="sub-nav"><a href="Alm_show_Registration_Certificate.aspx">Registration Certificate<span class="icon"></span></a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="../Alumin_Loginpage.aspx">Sign up/Login </a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="../Alumin_Loginpage.aspx">Membership </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Canvas Menu end -->
+
+    </form>
+
+    <script src="alumin-default-theme/js/jquery.min.js"></script>
+    <script src="alumin-default-theme/js/bootstrap.min.js"></script>
+    <script src="alumin-default-theme/js/owl.carousel.min.js"></script>
+    <script src="alumin-default-theme/js/slick.min.js"></script>
+    <script src="alumin-default-theme/js/wow.min.js"></script>
+    <script src="alumin-default-theme/js/rsmenu-main.js"></script>
+    <script src="alumin-default-theme/js/jquery.magnific-popup.min.js"></script>
+    <script src="alumin-default-theme/js/main.js"></script>
+
+    <%--<script src="alumin-default-theme/js/modernizr-2.8.3.min.js"></script>
+    <script src="alumin-default-theme/js/jquery.min.js"></script>
+    <script src="alumin-default-theme/js/bootstrap.min.js"></script>
+    <script src="alumin-default-theme/js/owl.carousel.min.js"></script>
+    <script src="alumin-default-theme/js/slick.min.js"></script>
+    <script src="alumin-default-theme/js/isotope.pkgd.min.js"></script>
+    <script src="alumin-default-theme/js/imagesloaded.pkgd.min.js"></script>
+    <script src="alumin-default-theme/js/wow.min.js"></script>
+    <script src="alumin-default-theme/js/waypoints.min.js"></script>
+    <script src="alumin-default-theme/js/jquery.counterup.min.js"></script>
+    <script src="alumin-default-theme/js/jquery.magnific-popup.min.js"></script>
+    <script src="alumin-default-theme/js/rsmenu-main.js"></script>
+    <script src="alumin-default-theme/js/plugins.js"></script>
+    <script src="alumin-default-theme/js/main.js"></script>--%>
+</body>
+</html>

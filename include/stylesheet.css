@@ -1,0 +1,479 @@
+.mainmenu
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;    
+	COLOR:#999999;
+    FONT-STYLE: normal ;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.alignment {
+	TEXT-JUSTIFY: inter-word; TEXT-ALIGN: justify;
+	padding-right:5;
+}
+A:link
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#redlinks
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #ff0000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#redlinks2
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ff0000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#redlinks3
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: #ff0000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #999999;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#redlinks A:hover
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #666666;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#redlinks2 A:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #666666;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.largebody
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14px;
+    PADDING-BOTTOM: 18px;
+    COLOR: #888888;
+    PADDING-TOP: 18px;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #e6e6e6
+}
+.largebodynopad
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14px;
+    COLOR: #888888;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #e6e6e6
+}
+.headings
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #ff0000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.subheadings
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.body
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 19px;
+    COLOR:Maroon ;
+    PADDING-TOP: 19px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.bodynopad
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A:visited
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#redlinks2 A:visited
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ff0000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#chart A:visited
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#chart A:hover
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #ff0000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#chart A:link
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+#redlinks A:visited
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ff0000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.bodyred
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ff0000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.menuhead
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.menunormal
+{
+    FONT-SIZE: 9px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #cccccc
+}
+.menuup
+{
+    FONT-SIZE: 10px;
+    COLOR: #ff0000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #ffff00
+}
+.blackbg
+{
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #000000
+}
+.jtxt
+{
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #b9b9b9
+}
+.popheading
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #666666;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: white
+}
+.popdetail
+{
+    BORDER-RIGHT: gray 1px;
+    PADDING-RIGHT: 2pt;
+    BORDER-TOP: gray 1px;
+    PADDING-LEFT: 2pt;
+    FONT-SIZE: 10px;
+    PADDING-BOTTOM: 2pt;
+    BORDER-LEFT: gray 1px;
+    COLOR: #666666;
+    PADDING-TOP: 2pt;
+    BORDER-BOTTOM: gray 1px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smallblack
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+#smallblack
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9px;
+    COLOR: #999999;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.infotext
+{
+    FONT-SIZE: 9px;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smallbody
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9px;
+    COLOR: #999999;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+SELECT
+{
+    FONT-SIZE: 9px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smallbodywhite
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.bodyintro
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.date
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ff0000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.verysmall
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9px;
+    COLOR: #999999;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.mainmenugrey
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #999999;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.bodytest
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.bubble
+{
+    BORDER-RIGHT: thin;
+    BORDER-TOP: thin;
+    BORDER-LEFT: thin;
+    BORDER-BOTTOM: thin
+}
+.case
+{
+    FONT-SIZE: 10px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.casetitle
+{
+    FONT-SIZE: 12px;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.popupheading
+{
+    FONT-SIZE: 24px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.popupbody
+{
+    FONT-SIZE: 10px;
+    PADDING-BOTTOM: 18px;
+    COLOR: #000000;
+    PADDING-TOP: 18px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.popuplargecopy
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.VisContent
+{
+    FONT-SIZE: 11px;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #eeeeee
+}
+.Input
+{
+    FONT-SIZE: 9px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.mHeading
+{
+    FONT-SIZE: 15pt;
+    FONT-FAMILY: Arial
+}
+.LMenu
+{
+    BORDER-RIGHT: #b9b9b9 1px solid;
+    BORDER-TOP: #b9b9b9 1px solid;
+    FONT-SIZE: 9px;
+    BORDER-LEFT: #b9b9b9 1px solid;
+    COLOR: white;
+    BORDER-BOTTOM: #b9b9b9 1px solid;
+    FONT-FAMILY: Tahoma;
+    BACKGROUND-COLOR: #b9b9b9
+}
+.LMenuhover
+{
+    BORDER-RIGHT: #b9b9b9 1px solid;
+    BORDER-TOP: #b9b9b9 1px solid;
+    FONT-SIZE: 9px;
+    BORDER-LEFT: #b9b9b9 1px solid;
+    COLOR: #ff0000;
+    BORDER-BOTTOM: #b9b9b9 1px solid;
+    FONT-FAMILY: Tahoma;
+    BACKGROUND-COLOR: yellow
+}
+.LMenusub
+{
+    BORDER-RIGHT: #b9b9b9 1px solid;
+    BORDER-TOP: #b9b9b9 1px solid;
+    FONT-SIZE: 9px;
+    BORDER-LEFT: #b9b9b9 1px solid;
+    COLOR: #b9b9b9;
+    BORDER-BOTTOM: #b9b9b9 1px solid;
+    FONT-FAMILY: Tahoma;
+    BACKGROUND-COLOR: #ffffff
+}
+.poplink
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ff0033;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.caseWhite
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.popTxt
+{
+    BACKGROUND-COLOR: white
+}
+#mailtxt
+{
+    FONT-SIZE: 10px;
+    COLOR: #666666;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: white
+	
+}
+.headings1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #ff0000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.pad
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14px;
+    PADDING-BOTTOM: 18px;
+    COLOR: #888888;
+    PADDING-TOP: 18px;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.padSectors
+{
+    PADDING-BOTTOM: 23px;
+    PADDING-TOP: 23px
+}
+.pad1
+{
+    PADDING-TOP: 19px
+}
+.padBottom
+{
+    PADDING-BOTTOM: 19px
+}
+P.PClass
+{
+    LINE-HEIGHT: 8px
+}
+.tdb
+{
+    BORDER-LEFT: #cccccc 1px solid
+}

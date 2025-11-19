@@ -1,0 +1,816 @@
+﻿@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,  caption, tbody, tfoot, thead, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a {
+	color:#0B6790;
+	font-size:12px;
+	text-decoration:none;
+    cursor:pointer;
+}
+a:hover {
+	color:#3588c0;
+	text-decoration:underline;
+}
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #4F4F4F;
+    font-family: 'Poppins', sans-serif, arial, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+input[type="radio"] {
+	margin:0 3px 0 0;
+}
+input[type="checkbox"] {
+	margin:0 3px 0 0;
+}
+img {
+	border:none;
+}
+.header {
+	background:url(online/header-bg.jpg) repeat-x scroll 0 -11px;
+	float:left;
+	width:100%;
+	height: 90px;
+}
+.logo {
+    float: left;
+    padding: 3px 0 0 10px;
+    width: 615px;
+}
+.adminstudentlogin {
+    float: right;
+    padding-top: 65px;
+    width: 300px;
+}
+.adminstudentlogin ul {
+	float:right;
+	list-style:none;
+}
+.adminstudentlogin ul li {
+    float: left;
+    font-weight: 600;
+    padding: 2px 10px;
+}
+.body-content {
+    float: left;
+    min-height: 400px;
+    padding: 5px 1.5%;
+    width: 97%;
+}
+.footer {
+    background: none repeat scroll 0 0 #a6d5f6;
+    border-top: 1px solid #355BA5;
+    float: left;
+    font-weight: 600;
+    height: 74px;
+    line-height: 75px;
+    text-align: center;
+    width: 100%;
+}
+.homeleft {
+	float:left;
+	width:48%;
+}
+.homeright {
+	float: left;
+    padding-left: 2%;
+    width: 50%;
+}
+/*h2 {
+    background: url("online/heading-bg.jpg") repeat-x scroll 0 0 transparent;
+    color: #0171A3;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 18px;
+	margin-bottom:10px;
+    padding: 7px;
+}*/
+h2 {
+    background: none repeat scroll 0 0 #009ACD;
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    padding: 0 0 0 6px;
+}
+h2 span.link {
+	font-size:12px;
+	float:right;
+	font-weight:normal;
+}
+.homeleft h2 span.head {
+	width:70%;
+	float:left;	
+}
+.openinghead {
+    color: #0171A3;
+    font-size: 14px;
+	font-weight:600;
+}
+.labelhead {
+	font-weight:600;
+	color: #0171A3;
+}
+.homeright h2 span.head {
+	float:left;
+	width:78%;
+}
+table tr td, table tr th {
+	padding:3px;
+}
+/* ================ scroll css =============== */
+.slimScrollDiv {
+	margin-bottom:10px;
+	height:330px !important;
+}
+#testrailalwaysvisible {
+	height:263px !important;
+}
+#testrailalwaysvisible table tr td, #testrailalwaysvisible table tr th {
+	border: medium none;
+}
+.slimScrollRail {
+	background: none repeat scroll 0 0 #5cb5e8 !important;
+}
+.slimScrollBar {
+	background: none repeat scroll 0 0 #0C669A !important;
+}
+#newsblockscroll, .newsblock .slimScrollDiv {
+	height:220px !important;
+}
+/*========= End of scroll css ===============*/
+.newsblock {
+	float:left;
+	width:100%;
+}
+.newsblock ul {
+    float: left;
+    padding-left: 23px;
+    width: 94%;
+}
+.newsblock li {
+    border-bottom: 1px dotted #6AC4EC;
+    list-style-type: decimal;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.newsblock li span {
+ 	font-style:italic;
+}
+.newsblock li span.submitbypostedby {
+    color: #0171A3;
+    font-weight: 600;
+}
+.content {
+	padding:0 10px;
+}
+.portal-log {
+    margin: 3% auto;
+    width: 696px;
+}
+.pot-tp {
+    background: url("online/login-bg.gif") repeat-x scroll center bottom #ECF6FD;
+    border: 1px solid #72B8E8;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    min-height: 485px;
+    padding: 10px 20px;
+    width: 661px;
+}
+.login-pg {
+    margin: 4% auto;
+    width: 696px;
+}
+.innerpart {
+	background: url("online/login-bg.gif") repeat-x scroll center bottom #ECF6FD;
+    border: 1px solid #72B8E8;
+    border-radius: 5px 5px 5px 5px;
+    float:left;
+	padding: 10px 20px;
+    width: 661px;
+}
+.loginlogo, .loginlogoimg, .logininfo {
+	float:left;
+	width:100%;
+	margin-bottom:5px;
+}
+.loginlogoimg {
+	text-align:center;
+}
+.logininfo, .pop-right h2 {
+	background:none;
+	padding: 0 !important;
+}
+.titlename {
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.titlename span {
+	float:left;
+	width:320px;
+}
+.titlename a {
+	float:right;
+	font-size:14px;
+	text-decoration:underline;
+}
+.pot-tp .frmss{width:350px; font-size:12px; font-weight:600; float:left; position:relative;}
+.pop-right{width:309px; font-size:12px; font-weight:600; float:left; margin-top:-34px; }
+.newbtn1, .genratechallanbtn a {
+	background:url(online/submitbtnbg.gif) repeat-x 0 0; 
+	color:#fff; 
+	text-decoration:none; 
+	border: 1px solid #0F6388;
+	font-weight:600;
+	height:25px; 
+	line-height:25px; 
+	width:130px; 
+	text-align:center; 
+	display:block; 
+}
+.newbtn1:hover, .genratechallanbtn a:hover {
+	color:#acd9ee;
+	text-decoration:underline;
+}
+.us-ic, .ps-ic, .us-ic1, .ps-ic1 {border: 1px solid #0F6388; padding:5px; width:200px;}
+.log-mid {
+	float:left;
+	width:100%;
+}
+.logbot{color:#000; font-size:11px; text-align:center;  font-weight:600; float:left; width:100%; }
+.log-mid .ctrl{padding:10px 0; width:538px; margin-left:9px; color:#000; font-size:12px; font-weight:600;}
+.footer img, .footertext img {
+ margin-top:19px;
+}
+.main-por {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    padding: 5px 1.5%;
+    width: 97%;
+}
+.headerq {
+    background: url("online/header-bg.jpg") repeat-x scroll 0 0 transparent;
+    float: left;
+    height: 83px;
+    width: 100%;
+}
+.logowrap{width:615px; float:left;}
+.headerq h1 {
+    color: #fff;
+    float: right;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 10px 0 0;
+}
+
+.wel-txt{
+	float:right; width:290px; 
+	padding:10px 10px 0 0; 
+	margin-left:0px; 
+	text-align:right;
+	color:yellow; 
+	font-size:13px; 
+    font-weight:600; 
+}
+.wel-txt a {
+	font-size:13px; 
+	font-weight:600;
+}
+.headerright {
+    float: right;
+    margin-top: 10px;
+    width: 350px;
+}
+.logowrap img {
+	margin: 3px 0 0 10px;
+}
+.links {
+    background: url("online/navbg.gif") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #0A89C2;
+    border-top: 1px solid #0A89C2;
+    float: left;
+    height: 26px;
+    width: 100%;
+}
+.links ul {
+	float:left;
+	padding:0;
+	width:100%;
+	list-style-type:none;
+}
+.links ul li {
+	float:left;
+	padding:0;
+	margin:0;
+}
+.links a {
+    color: #075D83;
+    float: left;
+    font-weight: 600;
+    padding: 3px 15px 5px;
+}
+.links a:hover {
+	text-decoration:underline;
+}
+.footertext {
+    background: none repeat scroll 0 0 #f1f1f1;
+    border-top: 1px solid #999;
+    float: left;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+}
+.logout-wp{
+	background: url("online/login-bg.gif") repeat-x scroll center bottom #ECF6FD;
+    border: 1px solid #72B8E8;
+    border-radius: 5px 5px 5px 5px;
+	width:561px;
+	height:125px; 
+	padding:20px; 
+	margin:20% 26%;
+	}
+.logout-wp .newbtn1{width:180px; margin-top:10px;}
+.logout-wp h1 {
+    background: none repeat scroll 0 0 #0C85BA;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px;
+}
+.log-ic #lblMsg {
+	font-size: 16px;
+    text-transform: lowercase;
+}
+.log-ic img {
+	display:none;
+}
+.logout-wp .log-ic {
+    font-size: 12px;
+    font-weight: 600;
+    height: 84px;
+    line-height: 25px;
+    margin-top: 15px;
+    width: 400px;
+}
+.bodywrap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    width: 100%;
+}
+.wr-left {
+    border-right: 1px solid #E3E3E3;
+    color: #000000;
+    float: left;
+    font-size: 12px;
+    width: 80%;
+}
+.wr-leftnew {
+    border-right: 1px solid #E3E3E3;
+    color: #000000;
+    float: left;
+    font-size: 12px;
+    width: 100%;
+}
+.wr-right {
+    background: url("online/bg-right.jpg") no-repeat scroll center bottom transparent;
+    color: #777575;
+    float: left;
+    font-size: 12px;
+    padding-bottom: 140px;
+    padding-left: 0.8%;
+    width: 18%;
+}
+/*.next-btn{background:url(images/next-btn.jpg) no-repeat 0 0 !important; border: medium none !important; width:78px; height:25px; overflow:hidden; padding-top:25px !important; cursor:pointer;}*/
+.num-ic{background:url(online/num-ic.jpg) no-repeat 0 0; height:19px; width:19px;display:block; float:left; line-height:17px; color:#FFFFFF!important; font-size:14px; text-align:center; font-weight:600; padding:0;}
+.num-ic span {
+	float:left;
+	width:19px;
+}
+.add-btn{border: medium none !important; background:url(online/add-btn.jpg) no-repeat 0 0 !important; border:0; width:78px; height:25px; margin-right:10px; overflow:hidden; padding-top:25px!important; cursor:pointer;}
+
+/*.sub-btn{border: medium none !important; background:url(online/submit-btn.jpg) no-repeat 0 0 !important; border:0; width:78px; height:25px; margin-right:10px; overflow:hidden; padding-top:25px!important; cursor:pointer;}*/
+
+.sea-btn{border: medium none !important; background:url(online/sea-btn.jpg) no-repeat 0 0 !important; border:0; width:78px; height:25px; margin-right:10px; overflow:hidden; padding-top:25px!important; cursor:pointer;}
+
+/*.prev-btn{border: medium none !important; background:url(images/pre_btn.jpg) no-repeat 0 0 !important; border:0; width:78px; height:25px; overflow:hidden; padding-top:25px !important; cursor:pointer;}*/
+/*.pnt-btn{border: medium none !important; background:url(online/print-btn.jpg) no-repeat 0 0!important; border:0; width:78px; height:25px;  margin-right:10px; overflow:hidden; padding-top:25px!important; cursor:pointer;}*/
+.wr-right h4 {
+	color: #0B6790;
+    font-size: 14px;
+    font-weight: 600;
+}
+.wr-right tr td {
+    padding: 0;
+    vertical-align: top;
+}
+.wr-right tr td h5 {
+	font-weight:600;
+	width:161px;
+}
+.mainheading {
+	font-size: 14px;
+	color: #0B6790;
+    font-weight: 600;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: right;
+}
+.wr-right tr td h5 a {
+	font-size:11px;
+}
+.wr-left h2{font-size:13px; margin-bottom:5px; background: none repeat scroll 0 0 #96CFF8; color:#000;}
+.marq{border:1px solid #666; padding:3px; margin-bottom:7px; background:#dadada; display:none;}
+.wr-left h3 {
+    background: none repeat scroll 0 0 #EBEBEB;
+    border-left: 8px solid #228ece;
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font-family: 'Trebuchet MS';
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+.noborder tr td {
+	border:none;
+}
+h2 span.link a {
+	display: inline;
+}
+.abtus {
+    float: left;
+    margin-bottom: 15px;
+    width: 99%;
+}
+.abtus-tp{display:none; }
+.abtus-bt {
+    background: url("online/hm-tp.jpg") no-repeat scroll center bottom transparent;
+    float: left;
+    padding: 0 0 395px;
+    width: 100%;
+}
+.wr-left .wr-left {
+	width:99%;
+	border:none;
+}
+.abtus-bt p {
+    color: #2E2E2E;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 10px !important;
+    padding: 1px 0;
+    text-align: justify;
+}
+#ticker { float:left; width:100%; }
+#ticker ul {
+	padding-left:20px;
+}
+#ticker li {
+    border-bottom: 1px dotted #ccc;
+    border-left: 1px solid #FFFFFF;
+    margin-left: 0;
+    padding: 0 10px 10px;
+}
+#ticker li.last { border-bottom:1px solid #ffffff; }
+#ticker div { margin-top:0; }
+.dwn{background-color:#f5f5f5;  border:1px solid #9b1416; padding:5px; }
+.dwn a {
+    background: url("online/li.jpg") no-repeat scroll left 5px transparent;
+    color: #9B1416;
+    float: left;
+    font-size: 11px;
+    padding-left: 15px;
+    /*width: 120px;*/
+}
+.dwn a:hover{color:#000; text-decoration:none;}
+.new-table .portalboxsmall {
+    border: 1px solid #666;
+    font-size: 11px;
+    padding: 2px;
+    width: 140px;
+}
+.new-table {
+    border: 1px solid #666;
+    border-collapse: collapse;
+}
+.new-table td{ padding:5px 5px;}
+
+.new-table .portalbox {
+    border: 1px solid #666;
+    font-size: 11px;
+    padding: 2px;
+    width: 280px;
+}
+.new-table .portalboxmultiline {
+    border: 1px solid #666;
+    font-size: 11px;
+    height: 50px;
+    padding: 2px;
+    width: 280px;
+}
+.new-table .portaldown {
+    border: 1px solid #666;
+    font-size: 11px;
+    padding: 2px;
+    width: 283px;
+}
+.forgotpass {
+	float: right;
+    margin: 5px 0 0;
+}
+.loginstudent {
+	float: left;
+    width: 70px;
+}
+.loginfailed {
+	bottom: 0;
+    left: 123px;
+    position: absolute;
+}
+.pot-tp table tr td {
+	padding:0;
+}
+.downloaddoc {
+	padding:0;
+}
+.downloaddoc .dwn {
+    background: none repeat scroll 0 0 #ceecff;
+    border: 1px solid #666;
+    padding: 0;
+}
+.downloaddoc .dwn a {
+    background: url("online/li.jpg") no-repeat scroll left 7px transparent;
+    color: #9B1416;
+    font-weight:600;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.downloaddoc .dwn a:hover {
+	text-decoration:none;
+}
+#dvJobDetails {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 5px solid #006A9A;
+    float: left;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius:10px;
+    position: absolute;
+    width: 50%;
+    top:0;
+    left:0;
+    z-index: 999999;
+    padding: 10px;
+    margin: 9% 26%;
+}
+.popupjobdtl td {
+	border:solid 1px #7699c8;
+}
+.underlinelink a {
+	text-decoration:underline;
+}
+.underlinelink a:hover, .underlinelink a span:hover {
+	color:#9B1416 !important;
+}
+#dvJobDetails h3 {
+    background: none repeat scroll 0 0 #3ABBE6;
+    color: #FFFFFF;
+    margin:10px 0 5px 0;
+}
+.closebtn {
+    float: right;
+    position: relative;
+    right: 10px;
+    top: 4px;
+}
+.closebtn a {
+    background: url("online/closebtn.png") no-repeat scroll 0 2px transparent;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    height: 16px;
+    padding: 0 0 0 17px;
+}
+.popupbtn, #dvPrintJobDetails {
+	float:left;
+	width:100%;
+}
+.printbtn {
+	float:left;
+}
+#lightbook {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 5px solid #006A9A;
+    border-radius: 10px 10px 10px 10px;
+    float: left;
+    left: 0;
+    margin: 15% 21%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 250px !important;
+    z-index: 999999;
+}
+#lightbook table tr td img {
+	border: 1px solid #E8E8E8 !important;
+    padding: 5px;
+}
+.close {
+    background: url("online/closebtn.png") no-repeat scroll 0 2px transparent;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    font-weight: 600;
+    height: 16px;
+    padding: 0 0 0 17px;
+}
+.headnews {
+	float:left;
+	width:100%;
+	font-weight:600;
+	color: red;
+	padding:0 0 5px 0;
+}
+.genratechallanbtn span  {
+	float: left;
+    font-size: 11px;
+    font-weight: normal;
+    color: red;
+    width: 100%;
+}
+.pot-tp table tr .genratechallanbtn {
+	padding-top:12px;
+}
+.new-table ul {
+	list-style-position:inside;
+}
+.downloadlink:hover {
+    text-decoration:none !important;
+    color:#9b1416 !important;
+}
+#lnkbtnNewReg {
+	color:#fff !important;
+}
+#lnkbtnNewReg:hover {
+	color:#acd9ee !important;
+}
+input[type="submit"], input[type="button"] {
+    background-color: #f39c12; 
+    border: 1px solid #f39c12;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 5px 6px;
+    border-radius: 5px 5px 5px 5px;
+}
+/*.button-common:hover {
+	background: url("online/submit-hover.gif") repeat-x scroll 0 0 transparent;
+	text-decoration: none;
+}*/
+.PopcalTrigger {
+	width:24px;
+	height:24px;
+}
+.registration-bg {
+    background-image: url(../../include/Bootstrap/images/student-reg--background-image.jpg) !important;
+    background-size: cover !important; 
+    background-position: center !important; 
+}
+.reg-main {
+    margin: 33px 4% !important;
+    padding: 0;
+    min-height: 100vh; 
+}
+.student-portal {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    min-height: 550px;
+}
+.reg-headermain {
+    background: #016773;
+    display: inline-block;
+    width: 100%;
+}
+.boxhead {
+    background: #ebebeb;
+    margin-bottom: 20px;
+    border-left: solid 5px #016773;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 600;
+}
+.form-control {
+    display:inline-block !important;
+    width:94%;
+}
+.pnl-body-custom {
+    padding: 0;
+    /*border:solid 1px #bce8f1;*/
+}
+.loginfooter {
+    background: #232425;
+    text-align: center;
+    padding: 8px 0;
+    display: inline-block;
+    width: 100%;
+}
+.alumnilohinpagelink a {
+    float:right;
+    color:#fff; font-weight:600;
+    margin:30px 10px 0 0;
+}
+.alumnilohinpagelink a:hover {
+    color:#f0ad4e;
+}
+.fieldset-border {
+    border: solid 1px #bce8f1;
+    padding:5px;
+    border-radius:5px;
+    margin:0 5px;
+}
+.fieldset-border legend  {
+    width: auto;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    padding:0 10px;
+    border-bottom: none;
+}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    position: static !important;
+    margin-left: 0 !important;
+}
+.checkbox label, .radio label {
+    min-height: 5px !important;
+    padding-left: 6px !important;
+    color: #000;
+}
+.form-horizontal .checkbox, .form-horizontal .radio { 
+    display: inline-block !important;
+    font-size: 12px !important;
+}
+.fee-dtl {
+    background: #daeef1;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    display: inline-block;
+}
+/*.loginfooter img {
+	display:none;
+}*/
+.form-group .custom-cal, .box, .col-md-12, .col-lg-12 {position:static !important;}
+.rs-about.style1 .notice-bord.style1 li .date span {
+            font-size: 22px;
+        }
+        .rs-about.style1 .desc .btn-btm .rs-view-btn a:after {
+            content: "\f054";
+            font-family: fontawesome;
+            font-size: 10px;
+            position: relative;
+            right: 0px;
+            top: 0px;
+            display: inline-block;
+            margin-left: 3px;
+        }
+        .ovrflw .scroll-flw {
+            height: 435px;
+        }
+        .rs-about.style1 .notice-bord.style1.custom-pop {
+            margin-top: 0px;
+        }
+            .rs-about.style1 .notice-bord.style1.custom-pop li {
+                margin-bottom: 12px;
+            }
+        h3.box-title {
+            font-size: 14px !important;
+        }
+        .owl-item .custom-blog-image img {
+            height: 100px !important;
+            width: 100px !important;
+        }
+        .owl-stage {
+            display: -webkit-box;
+        }	
+.custom-text-left-alumni-registration {
+            text-align: left !important;
+        }

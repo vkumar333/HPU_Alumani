@@ -1,0 +1,296 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PendingAlumniMasterPage.master.cs" Inherits="Alumni_PendingAlumniMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title>HPU :: PORTAL</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link href="../include/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../include/bootstrap/font-awesome.min.css" rel="stylesheet" />
+    <link href="alumin-default-theme/css/animate.css" rel="stylesheet" />
+    <link href="alumin-default-theme/css/magnific-popup.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/style.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/rsmenu-main.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/owl.carousel.css">
+    <%--<link rel="stylesheet" type="text/css" href="alumin-default-theme/fonts/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/fonts/fonts2/flaticon.css">--%>
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/responsive.css">
+    <link href="../App_Themes/CCSBLUE/default.css" rel="stylesheet" />
+
+    <!--New Chat Bot CSS-->
+    <link href="../Content/style.css" rel="stylesheet" />
+
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        i.fa.fa-linkedin, i.fa.fa-linkedin:hover, i.fa.fa-facebook, i.fa.fa-facebook:hover, i.fa.fa-twitter, i.fa.fa-twitter:hover {
+            color: #fff !important;
+        }
+
+        .sec-title h2 {
+            color: #000;
+            background: none;
+        }
+
+        .sidebar-area .search-box .btn {
+            top: 20px;
+            height: auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Broadcast that you're opening a page.
+        localStorage.openpages = Date.now();
+        var onLocalStorageEvent = function (e) {
+            if (e.key == "openpages") {
+                // Listen if anybody else is opening the same page!
+                localStorage.page_available = Date.now();
+            }
+            if (e.key == "page_available") {
+                alert("Application is already running in another Tab.");
+                open(location, '_self').close();
+                close();
+            }
+        };
+        window.addEventListener('storage', onLocalStorageEvent, false);
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        var isClose = false;
+        //this code will handle the F5 or Ctrl+F5 key
+        //need to handle more cases like ctrl+R whose codes are not listed here
+        document.onkeydown = checkKeycode
+        function checkKeycode(e) {
+            var keycode;
+            if (window.event)
+                keycode = window.event.keyCode;
+            else if (e)
+                keycode = e.which;
+            if (keycode == 116) {
+                isClose = true;
+            }
+        }
+        function somefunction() {
+            isClose = true;
+        }
+
+        function bodyUnload() {
+
+            if (!isClose) {
+                var request = GetRequest();
+                request.open("GET", "~/Logout.aspx", true);
+                request.send();
+            }
+        }
+        function GetRequest() {
+            var request = null;
+            if (window.XMLHttpRequest) {
+                //incase of IE7,FF, Opera and Safari browser
+                request = new XMLHttpRequest();
+            }
+            else {
+                //for old browser like IE 6.x and IE 5.x
+                request = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+            }
+            return request;
+        }
+    </script>
+
+    <script language="javascript" type='text/JavaScript'>
+        window.history.forward();
+        function noBack() {
+            burstCache();
+            window.history.forward();
+        }
+
+        function ResolveUrl(url) {
+            if (url.indexOf("~/") == 0) {
+                url = baseUrl + url.substring(2);
+            }
+            return url;
+        }
+
+        function checkhistory() {
+            var baseUrl = "<%# ResolveUrl("~/InvalidAccess.aspx") %>";
+
+            if (window.history.length <= 0) {
+                window.location = baseUrl;
+                window.opener.location.reload();
+                window.history.forward();
+            }
+            if (document.referrer == null || document.referrer == "") {
+                window.location = baseUrl;
+            }
+        }
+
+        function formatNumberInCurrency(txtid) {
+            let inputTextBox = document.getElementById(txtid.id);
+            let inputValue = inputTextBox.value;
+
+            let valueWithoutComma = inputValue.replace(/,/g, ''); // Remove commas if any and convert to number
+            if (valueWithoutComma.length > 10) {
+                alert('Please enter appropriate amount!');
+                inputTextBox.value = 0;
+                return;
+            }
+
+            let number = parseFloat(inputValue.replace(/,/g, '')); // Remove commas if any and convert to number
+            if (!isNaN(number)) {
+                let formattedNumber = number.toLocaleString('en-IN');
+                inputTextBox.value = formattedNumber;
+            } else {
+                inputTextBox.value = 'Invalid input';
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="full-width-header mb-20">
+            <!--Header Start-->
+            <header id="rs-header" class="rs-header">
+                <!-- Header Top Start -->
+                <div class="rs-header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="logo-area">
+                                    <a href="#">
+                                        <img class="" src="alumin-default-theme/images/lite-logo.png" alt="logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="logo-area">
+                                    <a href="#">
+                                        <img class="pull-right" src="alumin-default-theme/images/lite-logo2.png" alt="logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Top End -->
+                <!-- Menu Start -->
+                <div class="menu-area menu-sticky alumni-nav-custom">
+                    <div class="container">
+                        <%--<div class="main-menu">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+                                            <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="lnkPay" Visible="false" OnClick="lnkpay_Click" Text="PAY NOW"></asp:LinkButton>
+                                                <Anthem:Label ID="lblPaymentMsg" runat="server" AutoUpdateAfterCallBack="true"></Anthem:Label>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>--%>
+                        <div class="custom-welcome">
+                            <ul class="nav-menu cust-menu">
+                                <li class="menu-item-has-children" style="padding: 7px;">
+                                    <img id="img_mast_user" autoupdateaftercallback="true" cssclass="" runat="server" width="40" height="140" /></li>
+                                <li class="menu-item-has-children" style="padding: 5px;">
+                                    <a href="Javascript:void(0);" class="wel-user"><%= Session["AlumniName"].ToString() %> </a>
+                                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="LOGOUT" Style="color: #f7ff8f;"></asp:LinkButton>
+                                    <Anthem:Label ID="lblPaymentMsg" runat="server" AutoUpdateAfterCallBack="true"></Anthem:Label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Menu End -->
+            </header>
+            <!--Header End-->
+        </div>
+
+        <div class="main-content">
+            <div id="rs-about" class="rs-about style1">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <%--<div class="maininner">--%>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <asp:Label ID="lblCheck" runat="server" CssClass="HeadingRed"></asp:Label>
+                            <%--</div>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--<p class="copyright">
+            <img src="alumin-default-theme/images/manage-iti.png">
+        </p>--%>
+    </form>
+</body>
+
+<%--<script language="javascript" src='<%=Page.ResolveUrl("~/include/CommonJS.js")%>'
+    type="text/javascript"></script>--%>
+
+<!-- jQuery 2.1.4 -->
+<%--<script src="../JQ/jQuery-2.1.4.min.js"></script>--%>
+<script src="alumin-default-theme/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<%--<script src="../JQ/bootstrap.min.js"></script>--%>
+<script src="alumin-default-theme/js/bootstrap.min.js"></script>
+<script src="alumin-default-theme/js/owl.carousel.min.js"></script>
+<script src="alumin-default-theme/js/slick.min.js"></script>
+<script src="alumin-default-theme/js/wow.min.js"></script>
+<script src="alumin-default-theme/js/rsmenu-main.js"></script>
+<script src="alumin-default-theme/js/jquery.magnific-popup.min.js"></script>
+<script src="../JQ/jquery.slimscroll.min.js"></script>
+<script src="../include/CommonJS.js" type="text/javascript"></script>
+<script src="alumin-default-theme/js/main.js"></script>
+<%--<script src='<%=Request.ApplicationPath%>/include/S_CommonJScript.js' type="text/javascript"></script>--%>
+<!-- slimscroll -->
+<script type="text/javascript">
+    document.getElementById("DDD").style.display = "none";
+    $(function () {
+        $('#inner-content-div').slimScroll({
+            height: '150px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div1').slimScroll({
+            height: '318px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div2').slimScroll({
+            height: '200px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div3').slimScroll({
+            height: '150px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div4').slimScroll({
+            //height: '330px'
+            //height: '330px!important'
+        });
+    });
+    $(function () {
+        $('#inner-content-div5').slimScroll({
+            height: '330px'
+        });
+    });
+</script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js"></script>
+
+</html>

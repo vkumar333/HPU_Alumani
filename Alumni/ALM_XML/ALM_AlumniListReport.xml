@@ -1,0 +1,115 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Alumni>
+    <pk_alumniid>14</pk_alumniid>
+    <alumni_name>aks</alumni_name>
+    <gender>M</gender>
+    <yearofpassing>2008</yearofpassing>
+    <fk_degreeid>50</fk_degreeid>
+    <currentaddress>sdfgsdfgsdfgsdfg</currentaddress>
+    <contactno>8978978897</contactno>
+    <email>aksingh@expediens.com</email>
+    <currentoccupation>sdfgsdfgsdfg</currentoccupation>
+    <degreename>PH.D</degreename>
+    <collegename>FACULTY OF ARTS, EDUCATION &amp; SOC. SCS.</collegename>
+    <regno>100/120                                           </regno>
+  </Alumni>
+  <Alumni>
+    <pk_alumniid>15</pk_alumniid>
+    <alumni_name>anjanee</alumni_name>
+    <gender>M</gender>
+    <yearofpassing>2008</yearofpassing>
+    <fk_degreeid>15</fk_degreeid>
+    <currentaddress>fasdf</currentaddress>
+    <contactno>5955132112</contactno>
+    <email>jchauhan@expediens.com</email>
+    <currentoccupation>sdf</currentoccupation>
+    <degreename>M.A.</degreename>
+    <collegename>FACULTY OF ARTS, EDUCATION &amp; SOC. SCS.</collegename>
+    <regno>121/545                                           </regno>
+  </Alumni>
+  <Alumni>
+    <pk_alumniid>17</pk_alumniid>
+    <alumni_name>sadfs</alumni_name>
+    <gender>M</gender>
+    <yearofpassing>2008</yearofpassing>
+    <fk_degreeid>15</fk_degreeid>
+    <currentaddress>asdf</currentaddress>
+    <contactno>8979878979</contactno>
+    <email>asdfasd@co.in</email>
+    <currentoccupation>sadfasd</currentoccupation>
+    <degreename>M.A.</degreename>
+    <collegename>FACULTY OF ARTS, EDUCATION &amp; SOC. SCS.</collegename>
+    <regno>asdsdf                                            </regno>
+  </Alumni>
+  <Alumni>
+    <pk_alumniid>18</pk_alumniid>
+    <alumni_name>raj</alumni_name>
+    <gender>M</gender>
+    <yearofpassing>2008</yearofpassing>
+    <fk_degreeid>19</fk_degreeid>
+    <currentaddress>sdfasd</currentaddress>
+    <contactno>9865456867</contactno>
+    <email>raj@gmail.com</email>
+    <currentoccupation>sdf</currentoccupation>
+    <degreename>M.COM (ACCOUNTING)</degreename>
+    <collegename>DEPARTMENT OF ACCOUNTING</collegename>
+    <regno>101/502                                           </regno>
+  </Alumni>
+  <Alumni>
+    <pk_alumniid>19</pk_alumniid>
+    <alumni_name>rinku</alumni_name>
+    <gender>F</gender>
+    <yearofpassing>1994</yearofpassing>
+    <fk_degreeid>17</fk_degreeid>
+    <currentaddress>sdf</currentaddress>
+    <contactno>9865489787</contactno>
+    <email>rinku@gmail.com</email>
+    <currentoccupation>sf</currentoccupation>
+    <degreename>B.COM.</degreename>
+    <collegename>INSTITUTE OF EVENING STUDIES</collegename>
+    <regno>102/233                                           </regno>
+  </Alumni>
+  <Alumni>
+    <pk_alumniid>20</pk_alumniid>
+    <alumni_name>Gaj</alumni_name>
+    <gender>M</gender>
+    <yearofpassing>2008</yearofpassing>
+    <fk_degreeid>50</fk_degreeid>
+    <currentaddress>asdf</currentaddress>
+    <contactno>9451456458</contactno>
+    <email>gaj@xyz.com</email>
+    <currentoccupation>asdf</currentoccupation>
+    <degreename>PH.D</degreename>
+    <collegename>FACULTY OF ARTS, EDUCATION &amp; SOC. SCS.</collegename>
+    <regno>1025                                              </regno>
+  </Alumni>
+  <Alumni>
+    <pk_alumniid>21</pk_alumniid>
+    <alumni_name>jai</alumni_name>
+    <gender>M</gender>
+    <yearofpassing>2007</yearofpassing>
+    <fk_degreeid>13</fk_degreeid>
+    <currentaddress>sadfasdf</currentaddress>
+    <contactno>9856465866</contactno>
+    <email>asdfsdafas@sdfja.com</email>
+    <currentoccupation>asdfasdf</currentoccupation>
+    <degreename>B.A.</degreename>
+    <collegename>FACULTY OF ARTS, EDUCATION &amp; SOC. SCS.</collegename>
+    <regno>105645                                            </regno>
+  </Alumni>
+  <Alumni>
+    <pk_alumniid>22</pk_alumniid>
+    <alumni_name>asdfsadf</alumni_name>
+    <gender>M</gender>
+    <yearofpassing>2013</yearofpassing>
+    <fk_degreeid>66</fk_degreeid>
+    <currentaddress>dfffdf</currentaddress>
+    <contactno>2344232342</contactno>
+    <email>jaikey@gmail.com</email>
+    <currentoccupation />
+    <degreename>L.L.M.</degreename>
+    <collegename>FACULTY OF LAW</collegename>
+    <regno>wesdfwe3                                          </regno>
+  </Alumni>
+</NewDataSet>

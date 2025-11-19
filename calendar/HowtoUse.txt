@@ -1,0 +1,7 @@
+ </div>
+  <a href="javascript:void(0)" onclick="if(self.gfPop)gfPop.fPopCalendar(document.form1.txt_chandigarhdate);return false;" HIDEFOCUS>
+   <img class="PopcalTrigger" align="absMiddle" src="../include/calendar/calbtn.gif" height="22" border="0" alt="" style="z-index: 118; left: 904px; position: absolute; top: 416px; width: 27px;" tabindex="5">
+   </a>
+    </div>
+     <iframe width=174 height=189 name="gToday:normal:agenda.js" id="Iframe1" src="../include/calendar/ipopeng.htm" scrolling="no" frameborder="0" style="visibility:visible; z-index:108; position:absolute; top:-500px; left:-500px;">
+</iframe>

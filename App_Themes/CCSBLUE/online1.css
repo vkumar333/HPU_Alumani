@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+.links span{display:block; float:left; margin:5px 10px 0 10px;}
+.pagebg h3{color:#096db3; font-weight:bold; font-size:20px; padding-left:20px; float:left;}
+.frm{font-size:14px; padding-left:13px;}
+.inp{background:#fafafa; border:1px solid #9a9a9a; width:350px; padding:3px 5px; margin-top:8px; }
+.sep{background:url(online/sep.jpg) repeat-x  0 0; height:36px;}
+.ar{background:url(online/ar.jpg) no-repeat 3px 0; padding:0 0 0 50px; font-size:12px; color:#777575; width:200px; float:left;}
+.ar h4{color:#64ad34; font-size:17px; padding-bottom:10px;}
+.ar h5{color:#096db3; font-size:13px;}
+.ar h5 a{color:#096db3; font-size:13px;}
+.ar h5 a:hover{color:#921212; text-decoration:none;}
+.labell{position:absolute; top:10px; right:30px; font-size:12px; font-weight:bold; text-align:right;}
+.labell span{color:#6a0c0d; display:block; padding-bottom:10px;}
+.pot-tp h2{ font-size:17px; color:#000; padding-left:15px; line-height:30px; height:30px;}
+.pop-right .btn1{background:url(online/btn-bg.jpg) repeat-x 2px center; border:1px solid #d56e00;  margin-top:15px;}
+.un-ic{background:#fff; border:1px #dca0a4 solid; padding:2px 3px 2px 15px; width:220px;}
+.btn1{background:url(online/btn-bg.jpg) repeat-x 2px center; border:1px solid #d56e00;  }
+.pagebg .table{border:0; font-size:12px;} 
+.pagebg .table td{padding:5px; }
+.leeft{width:585px; float:left;}
+.thnks{width:587px; float:left; background:#ecf9ff url(images/succ.jpg) no-repeat right center; border:1px solid #94cee8; padding:15px; min-height:200px;}.thnks h3{color:#1a6ca5; font-size:16px;}
+.msgs{color:#555; background:#ddd; font-size:11px;}
+.ndiv h2{color:#4b7990; font-size:14px; margin-bottom:10px!important; padding-bottom:0!important; }
+.ndiv p{color:#2e2e2e; font-size:13px; text-align:justify; margin-top:10px!important; line-height:18px;}
+.ndiv a{background:none;}

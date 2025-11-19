@@ -1,0 +1,972 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AlumniMasterPage.master.cs" Inherits="Alumni_AlumniMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title>HPU :: PORTAL</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link href="../include/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--<link href="../include/bootstrap/font-awesome.min.css" rel="stylesheet" />--%>
+    <link href="alumin-default-theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="alumin-default-theme/css/animate.css" rel="stylesheet" />
+    <link href="alumin-default-theme/css/magnific-popup.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/style.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/rsmenu-main.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/owl.carousel.css">
+    <%--<link rel="stylesheet" type="text/css" href="alumin-default-theme/fonts/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/fonts/fonts2/flaticon.css">--%>
+    <link rel="stylesheet" type="text/css" href="alumin-default-theme/css/responsive.css">
+    <link href="../App_Themes/CCSBLUE/default.css" rel="stylesheet" />
+	
+    <!--New Chat Bot CSS-->
+     <link href="../Content/style.css" rel="stylesheet" />
+
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        i.fa.fa-linkedin, i.fa.fa-linkedin:hover, i.fa.fa-facebook, i.fa.fa-facebook:hover, i.fa.fa-twitter, i.fa.fa-twitter:hover {
+            color: #fff !important;
+        }
+
+        .sec-title h2 {
+            color: #000;
+            background: none;
+        }
+
+        .sidebar-area .search-box .btn {
+            top: 20px;
+            height: auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Broadcast that you're opening a page.
+        localStorage.openpages = Date.now();
+        var onLocalStorageEvent = function (e) {
+            if (e.key == "openpages") {
+                // Listen if anybody else is opening the same page!
+                localStorage.page_available = Date.now();
+            }
+            if (e.key == "page_available") {
+                alert("Application is already running in another Tab.");
+                open(location, '_self').close();
+                close();
+            }
+        };
+        window.addEventListener('storage', onLocalStorageEvent, false);
+    </script>
+	
+    <script language="javascript" type="text/javascript">
+        var isClose = false;
+        //this code will handle the F5 or Ctrl+F5 key
+        //need to handle more cases like ctrl+R whose codes are not listed here
+        document.onkeydown = checkKeycode
+        function checkKeycode(e) {
+            var keycode;
+            if (window.event)
+                keycode = window.event.keyCode;
+            else if (e)
+                keycode = e.which;
+            if (keycode == 116) {
+                isClose = true;
+            }
+        }
+        function somefunction() {
+            isClose = true;
+        }
+
+        function bodyUnload() {
+
+            if (!isClose) {
+                var request = GetRequest();
+                request.open("GET", "~/Logout.aspx", true);
+                request.send();
+            }
+        }
+        function GetRequest() {
+            var request = null;
+            if (window.XMLHttpRequest) {
+                //incase of IE7,FF, Opera and Safari browser
+                request = new XMLHttpRequest();
+            }
+            else {
+                //for old browser like IE 6.x and IE 5.x
+                request = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+            }
+            return request;
+        }
+    </script>
+
+    <script language="javascript" type='text/JavaScript'>
+        window.history.forward();
+        function noBack() {
+            burstCache();
+            window.history.forward();
+        }
+
+        function ResolveUrl(url) {
+            if (url.indexOf("~/") == 0) {
+                url = baseUrl + url.substring(2);
+            }
+            return url;
+        }
+
+        function checkhistory() {
+            var baseUrl = "<%# ResolveUrl("~/InvalidAccess.aspx") %>";
+
+            if (window.history.length <= 0) {
+                window.location = baseUrl;
+                window.opener.location.reload();
+                window.history.forward();
+            }
+            if (document.referrer == null || document.referrer == "") {
+                window.location = baseUrl;
+            }
+        }
+
+        function formatNumberInCurrency(txtid) {
+            let inputTextBox = document.getElementById(txtid.id);
+            let inputValue = inputTextBox.value;
+
+            let valueWithoutComma = inputValue.replace(/,/g, ''); // Remove commas if any and convert to number
+            if (valueWithoutComma.length > 10) {
+                alert('Please enter appropriate amount!');
+                inputTextBox.value = 0;
+                return;
+            }
+
+            let number = parseFloat(inputValue.replace(/,/g, '')); // Remove commas if any and convert to number
+            if (!isNaN(number)) {
+                let formattedNumber = number.toLocaleString('en-IN');
+                inputTextBox.value = formattedNumber;
+            } else {
+                inputTextBox.value = 'Invalid input';
+            }
+        }
+    </script>
+
+</head>
+        
+<body class="inner-home-style2">
+    <form id="form1" runat="server">
+        <div class="full-width-header">
+            <!--Header Start-->
+            <header id="rs-header" class="rs-header">
+			<div class="top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-9 top-left">
+                                <ul>
+                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:hpualumniassociation@gmail.com">hpualumniassociation@gmail.com</a></li>
+                                    <li><i class="fa fa-globe" aria-hidden="true"></i><a href="https://www.hpuniv.ac.in" target="_blank">www.hpuniv.ac.in</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 top-middle">
+                                <ul>
+                                    <li><a id="facebookLink" href="#" runat="server"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a id="twitterLink" href="#" runat="server"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a id="linkedInLink" href="#" runat="server"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a id="youtubeLink" href="#" runat="server"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Top Start -->
+                <div class="rs-header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="logo-area text-center">
+                                    <a href="../Alumni/ALM_Alumni_Home.aspx">
+                                        <img class="img-fluid mx-auto" style="width:750px;" src="alumin-default-theme/images/lite-logo.png" alt="HPU">
+                                    </a>
+                                </div>
+                            </div>
+                           <%-- <div class="col-lg-6 col-md-12">
+                                <div class="logo-area">
+                                    <a href="#">&nbsp;
+                                        <img class="pull-right" src="alumin-default-theme/images/lite-logo2.png" alt="logo">
+                                    </a>
+                                </div>
+                            </div>--%>
+                        </div>
+                    </div>
+                </div>					
+                <!-- Header Top End -->
+                <!-- Menu Start -->
+                <div class="menu-area menu-sticky alumni-nav-custom">
+                    <div class="container">
+                        <div class="main-menu">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- <div id="logo-sticky" class="text-center">
+                                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                                </div> -->
+                                    <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+
+                                            <li class="menu-item-has-children">
+                                                <%-- <a href="ALM_Fund_DonationLists.aspx">Contribution</a>--%>
+                                                <asp:LinkButton runat="server" ID="lnkContribtion" Visible="true" OnClick="lnkContribtion_Click" Text="CONTRIBUTION"></asp:LinkButton>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="../Alumni/ALM_Alumni_Home.aspx">HOME </a>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <%--<asp:LinkButton runat="server" ID="lnkprofile" Visible="true" OnClick="lnkprofile_Click" Text="My Profile">
+                                                </asp:LinkButton>--%>
+                                                <a href="#">MY PROFILE <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="lnkprofile" Visible="true" OnClick="lnkprofile_Click" Text="My Profile">
+                                                        </asp:LinkButton>
+                                                    </li>
+													<%--<li>
+                                                        <asp:LinkButton runat="server" ID="lnkPrintRegistrationDetails" Visible="false" OnClick="lnkPrintRegistrationDetails_Click" Text="Print Alumni Registration Details">
+                                                        </asp:LinkButton>
+                                                        <Anthem:Label ID="lblMsg" runat="server" AutoUpdateAfterCallBack="True" CssClass="lblmessage"></Anthem:Label>
+                                                    </li>--%>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="lnkGenAlumniCard" Visible="true" OnClick="lnkGenAlumniCard_Click" Text="Digital Alumni Card">
+                                                        </asp:LinkButton>
+                                                    </li>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="LinkChangePass" Visible="false" OnClick="LinkChangePass_Click" Text="Change Password"></asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>											
+                                            <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="lnkpay" Visible="false" OnClick="lnkpay_Click" Text="PAY NOW"></asp:LinkButton>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="LinkNews" Visible="false" OnClick="LinkNews_Click" Text="NEWS & STORIES"></asp:LinkButton>
+                                            </li>
+                                            <%--<li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="LinkEvents" Visible="false" OnClick="LinkEvents_Click" Text="GALLERY"></asp:LinkButton>
+                                            </li>--%>
+											<li class="menu-item-has-children">
+                                                <%--<asp:LinkButton runat="server" ID="LinkSearch" Visible="false" OnClick="LinkSearch_Click" Text="Search Alumni"></asp:LinkButton>--%>
+                                                <a href="#">EVENTS <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="../Alumni/Alumni_NewsEvents_View.aspx">Events </a></li>
+                                                    <li><a href="../Alumni/Alumni_EventsGallery_View.aspx">Galleries </a></li>
+                                                </ul>
+                                            </li>
+                                           <%-- <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="LinkSuggestion" Visible="false" OnClick="LinkSuggestion_Click" Text="SUGGESTION"></asp:LinkButton>
+                                            </li>--%>
+                                            <li class="menu-item-has-children">
+                                                <%--<asp:LinkButton runat="server" ID="LinkSearch" Visible="false" OnClick="LinkSearch_Click" Text="Search Alumni"></asp:LinkButton>--%>
+                                                <a href="#">FIND ALUMNI <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="../Alumni/ALM_AlumniSearch.aspx">Alumni Directory </a></li>
+                                                    <li><a href="../Alumni/ALM_Near_by_AlumniHome.aspx">Alumni Nearby </a></li>
+                                                </ul>
+                                            </li>
+                                           <%-- <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="LinkMentee" Visible="true" OnClick="LinkMentee_Click" Text="MENTORSHIP"></asp:LinkButton>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="Lnkmeneeassigned" Visible="true" OnClick="Lnkmeneeassigned_Click" Text="MENTEES ASSIGNED"></asp:LinkButton>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="lnkInternships" Visible="false" OnClick="lnkInternships_Click" Text="INTERNSHIPS"></asp:LinkButton>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="LinkPublishJobs" Visible="false" OnClick="LinkPublishJobs_Click" Text="PUBLISH JOBS"></asp:LinkButton>
+                                            </li>--%>
+
+                                            <li class="menu-item-has-children">
+                                                <a href="#">CAREERS <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="LinkPublishJobs" Visible="false" OnClick="LinkPublishJobs_Click" Text="PUBLISH JOBS"></asp:LinkButton>
+                                                    </li>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="lnkInternships" Visible="false" OnClick="lnkInternships_Click" Text="INTERNSHIPS"></asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <%-- <li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="LinkChangePass" Visible="false" OnClick="LinkChangePass_Click" Text="Change Password"></asp:LinkButton>
+                                            </li>--%>
+                                            <%--<li class="menu-item-has-children">
+                                                <asp:LinkButton runat="server" ID="lnkbtnContribution" Visible="true" OnClick="lnkbtnContribution_Click" Text="Contribution"></asp:LinkButton>
+                                            </li>--%>
+											<%--<li class="menu-item-has-children">
+                                                <a href="#">SERVICES <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="Alm_BecomeMentor.aspx">Become a Mentor </a></li>
+                                                    <li><a href="Alm_BecomeMentee.aspx">Become a Mentee </a></li>
+                                                </ul>
+                                            </li>--%>											
+                                            <li class="menu-item-has-children menu-item-has-children-dropdown">
+                                                <a href="#">SERVICES <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
+                                                <ul class="sub-menu">
+                                                    <li class="sub-nav"><a href="ALM_Mentorship.aspx">Mentorship </a></li>
+                                                    <%--<li class="sub-nav">
+                                                        <a href="../Alumni/ALM_MentorshipHomepage.aspx">Mentorship Homepage </a>--%>
+                                                        <%--<ul class="sub-menu">
+                                                            <li><a href="Alm_BecomeMentor.aspx"> <i class="fa fa-angle-right" aria-hidden="true"></i> Become a Mentor </a></li>
+                                                            <li><a href="Alm_BecomeMentee.aspx"> <i class="fa fa-angle-right" aria-hidden="true"></i> Become a Mentee </a></li>
+                                                        </ul>--%>
+                                                    <%--</li>--%>
+                                                    <li class="sub-nav"><a href="ALM_Fund_DonationLists.aspx">Fundraising </a></li>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="LinkSuggestion" Visible="false" OnClick="LinkSuggestion_Click" Text="Suggestion"></asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>									
+                                            <li class="menu-item-has-children">
+                                                <a href="#">ABOUT <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="ALM_AboutUs_Home.aspx">About Us</a></li>
+                                                    <li><a href="ALM_Memorandom_Uploads.aspx">Memorandum of Association</a></li>
+                                                    <li><a href="ALM_Show_Registration_Certificates.aspx">Registration Certificate</a></li>
+                                                </ul>
+                                            </li>
+											<li class="menu-item-has-children">
+                                                <a href="javascript:void(0);"><i class="fa fa-power-off" aria-hidden="true"></i><%= Session["AlumniName"].ToString() %> </a>
+                                                <ul class="sub-menu">
+                                                    <li>
+														<a href="#">
+															<img id="img_mast_user" autoupdateaftercallback="true" cssclass="pull-left" runat="server" width="40" height="140" />
+															<span><%= Session["isLoggedUser"].ToString() %></span>
+															<asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="LOGOUT" Style="color: #f7ff8f;"></asp:LinkButton>
+														</a>
+													</li>
+                                                </ul>
+                                            </li>
+                                            <%--<li class="menu-item-has-children">
+                                                <a href="#">Find Alumni <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="../Alumni/Alm_Alumni_Directory.aspx">Alumni Directory </a></li>
+                                                    <li><a href="../Alumni/ALM_Near_by_AlumniHome.aspx">Find Nearby </a></li>
+                                                </ul>
+                                            </li>--%>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+						</div>
+                        <%--<div class="custom-welcome">
+                            <ul class="nav-menu cust-menu">
+                                <li class="menu-item-has-children" style="padding: 7px;">
+                                    <img id="img_mast_user" autoupdateaftercallback="true" cssclass="" runat="server" width="40" height="140" /></li>
+                                <li class="menu-item-has-children" style="padding: 5px;">
+                                    <a href="Javascript:void(0);" class="wel-user"><%= Session["AlumniName"].ToString() %> </a>
+                                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="LOGOUT" Style="color: #f7ff8f;"></asp:LinkButton>
+                                </li>
+                            </ul>
+                        </div>--%>
+                    </div>
+					
+                </div>
+                <!-- Menu End -->
+            </header>
+            <!--Header End-->
+        </div>
+
+        <div class="main-content">
+            <div id="rs-about" class="rs-about style1">
+                
+                            <%--<div class="maininner">--%>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <asp:Label ID="lblCheck" runat="server" CssClass="HeadingRed"></asp:Label>
+                            <%--</div>--%>
+                       
+            </div>
+        </div>
+        <%--<p class="copyright">
+            <img src="alumin-default-theme/images/manage-iti.png">
+        </p>--%>
+    <div class="livechat-close-main" style="display: none;">
+        <a class="livechat-close-btn" href="#"><i class="fa fa-close" aria-hidden="true" onclick="displayClose()" id="closeicon"></i></a>
+        <div class="livechat-close" id="assistanceboat" onclick="dispalyShow()" style="display: none;">
+        </div>
+    </div>
+
+    <div class="livechat" style="display: none;">
+        <div class="chat_live_main">
+            <div class="need-assistance-head" id="iconchat" style="display: block;">
+                <a class="chat-robot" href="javascript:void(0);">
+                    <img class="botchat" src="../../img/chatbot-ai.png" onclick="dispalyShow();">
+                </a>
+                &nbsp;
+            </div>
+            <div class="livechat_inside" style="display: none;" id="lvchat">
+                <div class="chatheader">
+
+                    <div class="headerchat">
+                        <div class="position">
+                            <span style="font-size: 16px;">
+                                Online Users </span>
+                          
+                        </div>
+                    </div>
+
+                    <div class="chatbtn" >
+                        <input type="button" id="minus" value="-" class="fa fa-minus" onclick="dispalyHide();" style="display: block;">
+                        <input type="button" id="plus" value="+" class="fa fa-minus" onclick="dispalyShow();" style="display: none;">
+                    </div>
+                    <div class="chatbtn-close">
+                      <%--  <a href="javascript:void(0);">
+                            <img src="../../img/chat-close-btn.png" onclick="dispalyHide()">
+                        </a>--%>
+                        <a href="javascript:void(0);">
+                            <img src="../../img/chat-close-btn.png" onclick="displayClose()">
+                        </a>
+                        &nbsp;
+                    </div>
+
+                    <div class="chat-circle-icon">
+                        <img src="../../img/chatbot-ai1.png">
+                    </div>
+                    <div class="waveWrapper waveAnimation">
+                        <div class="waveWrapperInner bgTop">
+                            <div class="wave waveTop" style="background-image: url('../../img/wave-top.png')"></div>
+                        </div>
+                        <div class="waveWrapperInner bgMiddle">
+                            <div class="wave waveMiddle" style="background-image: url('../../img/wave-mid.png')"></div>
+                        </div>
+                        <div class="waveWrapperInner bgBottom">
+                            <div class="wave waveBottom" style="background-image: url('../../img/wave-bot.png')"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-body">
+                    <div class="box-footer box-comments" id="divusers">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+        <div class="content-wrapper-chat" id="DDD">
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="row" id="PriChatDiv">
+                        </div>
+                        <textarea class="form-control" style="visibility: hidden;"></textarea>
+                    </div>
+            </div>
+        </div>
+           
+        <span id="time"></span>
+        <input id="hdId" type="hidden" />
+        <input id="PWCount" type="hidden" value="info" />
+        <input id="hdUserName" type="hidden" />
+        <input id="hdUserImage" type="hidden" />
+    </form>
+</body>
+
+<%--<script language="javascript" src='<%=Page.ResolveUrl("~/include/CommonJS.js")%>'
+    type="text/javascript"></script>--%>
+
+<!-- jQuery 2.1.4 -->
+<%--<script src="../JQ/jQuery-2.1.4.min.js"></script>--%>
+<script src="alumin-default-theme/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<%--<script src="../JQ/bootstrap.min.js"></script>--%>
+<script src="alumin-default-theme/js/bootstrap.min.js"></script>
+<script src="alumin-default-theme/js/owl.carousel.min.js"></script>
+<script src="alumin-default-theme/js/slick.min.js"></script>
+<script src="alumin-default-theme/js/wow.min.js"></script>
+<script src="alumin-default-theme/js/rsmenu-main.js"></script>
+<script src="alumin-default-theme/js/jquery.magnific-popup.min.js"></script>
+<script src="../JQ/jquery.slimscroll.min.js"></script>
+<script src="../include/CommonJS.js" type="text/javascript"></script>
+<script src="alumin-default-theme/js/main.js"></script>
+<%--<script src='<%=Request.ApplicationPath%>/include/S_CommonJScript.js' type="text/javascript"></script>--%>
+<!-- slimscroll -->
+
+<script type="text/javascript">
+    document.getElementById("DDD").style.display = "none";
+    $(function () {
+        $('#inner-content-div').slimScroll({
+            height: '150px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div1').slimScroll({
+            height: '318px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div2').slimScroll({
+            height: '200px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div3').slimScroll({
+            height: '150px'
+        });
+    });
+    $(function () {
+        $('#inner-content-div4').slimScroll({
+            //height: '330px'
+            //height: '330px!important'
+        });
+    });
+    $(function () {
+        $('#inner-content-div5').slimScroll({
+            height: '330px'
+        });
+    });
+</script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js"></script>
+<!--Dynamic Chat bot files-->
+<script src="../Scripts_Chat/jquery.signalR-2.4.3.js"></script>
+<script src="../Scripts_Chat/date.format.js"></script>
+<script src="..\signalr/hubs"></script>
+<script type="text/javascript">
+
+        var IntervalVal;
+        $(function () {
+ 
+            var chatHub = $.connection.chatHub;
+            debugger;
+            registerClientMethods(chatHub);
+            // Start Hub
+            $.connection.hub.start().done(function () {
+
+                registerEvents(chatHub)
+
+            });
+
+            // Reset Message Counter on Hover
+            $("#divChatWindow").mouseover(function () {
+
+                $("#MsgCountMain").html('0');
+                $("#MsgCountMain").attr("title", '0 New Messages');
+            });
+
+            
+
+            // Stop Title Alert
+            //window.onfocus = function (event) {
+            //    if (event.explicitOriginalTarget === window) {
+            //        clearInterval(IntervalVal);
+            //        document.title = 'SignalR Chat App';
+            //    }
+            //}
+
+        });
+
+        // Show Title Alert
+        function ShowTitleAlert(newMessageTitle, pageTitle) {
+            if (document.title == pageTitle) {
+                document.title = newMessageTitle;
+            }
+            else {
+                document.title = pageTitle;
+            }
+        }
+
+        function registerEvents(chatHub) {           
+             var name = '<%= UserName %>';            
+            if (name.length > 0) {
+                chatHub.server.connect(name);
+            }
+
+
+        // Clear Chat
+        $('#btnClearChat').click(function () {
+
+            var msg = $("#divChatWindow").html();
+
+            if (msg.length > 0) {
+                chatHub.server.clearTimeout();
+                $('#divChatWindow').html('');
+
+            }
+        });
+
+            // Send Button Click Event
+            $('#btnSendMsg').click(function () {
+
+                var msg = $("#txtMessage").val();
+
+                if (msg.length > 0) {
+
+                    var userName = $('#hdUserName').val();
+
+                    var date = GetCurrentDateTime(new Date());
+
+                    chatHub.server.sendMessageToAll(userName, msg, date);
+                    $("#txtMessage").val('');
+                }
+            });
+
+            // Send Message on Enter Button
+            $("#txtMessage").keypress(function (e) {
+                if (e.which == 13) {
+                    $('#btnSendMsg').click();
+                }
+            });
+        }
+
+        function registerClientMethods(chatHub) {
+            debugger;
+
+            // Calls when user successfully logged in
+            chatHub.client.onConnected = function (id, userName, allUsers, messages, times) {
+
+                $('#hdId').val(id);
+                $('#hdUserName').val(userName); 
+                $('#spanUser').html(userName);
+               // $('#hdUserImage').val(UserImage);
+
+                // Add All Users
+                for (i = 0; i < allUsers.length; i++) {
+
+                    AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName, allUsers[i].UserImage, allUsers[i].LoginTime);
+                }
+
+                // Add Existing Messages
+                for (i = 0; i < messages.length; i++) {
+                    AddMessage(messages[i].UserName, messages[i].Message, messages[i].Time, messages[i].UserImage);
+
+                }
+            }
+
+            // On New User Connected
+            chatHub.client.onNewUserConnected = function (id, name, UserImage, loginDate) {
+                debugger;
+                AddUser(chatHub, id, name, UserImage, loginDate);
+            }
+
+            // On User Disconnected
+            chatHub.client.onUserDisconnected = function (id, userName) {
+
+                $('#Div' + id).remove();
+
+                var ctrId = 'private_' + id;
+                $('#' + ctrId).remove();
+
+
+                var disc = $('<div class="disconnect">"' + userName + '" logged off.</div>');
+
+                $(disc).hide();
+                $('#divusers').prepend(disc);
+                $(disc).fadeIn(200).delay(2000).fadeOut(200);
+
+            }
+
+            chatHub.client.messageReceived = function (userName, message, time, userimg) {
+
+                AddMessage(userName, message, time, userimg);
+
+                // Display Message Count and Notification
+                var CurrUser1 = $('#hdUserName').val();
+                if (CurrUser1 != userName) {
+
+                    var msgcount = $('#MsgCountMain').html();
+                    msgcount++;
+                    $("#MsgCountMain").html(msgcount);
+                    $("#MsgCountMain").attr("title", msgcount + ' New Messages');
+                    var Notification = 'New Message From ' + userName;
+                    IntervalVal = setInterval("ShowTitleAlert('', '" + Notification + "')", 800);
+
+                }
+            }
+
+
+            chatHub.client.sendPrivateMessage = function (windowId, fromUserName, message, userimg, CurrentDateTime) {
+
+                var ctrId = 'private_' + windowId;
+                if ($('#' + ctrId).length == 0) {
+
+                    OpenPrivateChatBox(chatHub, windowId, ctrId, fromUserName, userimg);
+
+                }
+
+                var CurrUser = $('#hdUserName').val();
+                var Side = 'right';
+                var TimeSide = 'left';
+
+                if (CurrUser == fromUserName) {
+                    Side = 'left';
+                    TimeSide = 'right';
+
+                }
+                else {
+                    var Notification = 'New Message From ' + fromUserName;
+                    IntervalVal = setInterval("ShowTitleAlert('', '" + Notification + "')", 800);
+
+                    var msgcount = $('#' + ctrId).find('#MsgCountP').html();
+                    msgcount++;
+                    $('#' + ctrId).find('#MsgCountP').html(msgcount);
+                    $('#' + ctrId).find('#MsgCountP').attr("title", msgcount + ' New Messages');
+                }
+
+                var divChatP = '<div class="direct-chat-msg ' + Side + '">' +
+                    '<div class="direct-chat-info clearfix">' +
+                    '<span class="direct-chat-name pull-' + Side + '">' + fromUserName + '</span>' +
+                    '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + CurrentDateTime + '</span>' +
+                    '</div>' +
+
+                    ' <img class="direct-chat-img" src="' + userimg + '" alt="Message User Image">' +
+                    ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+                $('#' + ctrId).find('#divMessage').append(divChatP);
+
+                var htt = $('#' + ctrId).find('#divMessage')[0].scrollHeight;
+                $('#' + ctrId).find('#divMessage').slimScroll({
+                    height: htt
+                });
+            }
+
+        }
+
+        function GetCurrentDateTime(now) {
+
+            var localdate = dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+
+            return localdate;
+        }
+
+        function AddUser(chatHub, id, name, UserImage, date) {
+            debugger;
+            var userId = $('#hdId').val();
+            debugger;
+            var code, Clist;
+            if (userId == id) {
+
+                code = $('<div class="box-comment">' +
+                    '<img class="img-circle img-sm" src="' + UserImage + '" alt="User Image" />' +
+                    ' <div class="comment-text">' +
+                    '<span class="username">' + name + '<span class="text-muted pull-right">' + date + '</span>  </span></div></div>');
+
+
+                Clist = $(
+                    '<li style="background:#494949;">' +
+                    '<a href="#">' +
+                    '<img class="contacts-list-img" src="' + UserImage + '" alt="User Image" />' +
+
+                    ' <div class="contacts-list-info">' +
+                    ' <span class="contacts-list-name" id="' + id + '">' + name + ' <small class="contacts-list-date pull-right">' + date + '</small> </span>' +
+                    ' <span class="contacts-list-msg">How have you been? I was...</span></div></a > </li >');
+
+            }
+            else {
+
+                code = $('<div class="box-comment" id="Div' + id + '">' +
+                    '<img class="img-circle img-sm" src="' + UserImage + '" alt="User Image" />' +
+                    ' <div class="comment-text">' +
+                    '<span class="username">' + '<a id="' + id + '" class="user" >' + name + '<a>' + '<span class="text-muted pull-right">' + date + '</span>  </span></div></div>');
+
+
+                Clist = $(
+                    '<li>' +
+                    '<a href="#">' +
+                    '<img class="contacts-list-img" src="' + UserImage + '" alt="User Image" />' +
+
+                    ' <div class="contacts-list-info">' +
+                    '<span class="contacts-list-name" id="' + id + '">' + name + ' <small class="contacts-list-date pull-right">' + date + '</small> </span>' +
+                    ' <span class="contacts-list-msg">How have you been? I was...</span></div></a > </li >');
+
+
+                var UserLink = $('<a id="' + id + '" class="user" >' + name + '<a>');
+                $(code).click(function () {
+
+                    var id = $(UserLink).attr('id');
+
+                    if (userId != id) {
+                        var ctrId = 'private_' + id;
+                        OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                    }
+
+                });
+
+                var link = $('<span class="contacts-list-name" id="' + id + '">');
+                $(Clist).click(function () {
+
+                    var id = $(link).attr('id');
+
+                    if (userId != id) {
+                        var ctrId = 'private_' + id;
+                        OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                    }
+
+                });
+
+            }
+
+            $("#divusers").append(code);
+
+            $("#ContactList").append(Clist);
+
+        }
+
+        function AddMessage(userName, message, time, userimg) {
+
+            var CurrUser = $('#hdUserName').val();
+            var Side = 'right';
+            var TimeSide = 'left';
+
+            if (CurrUser == userName) {
+                Side = 'left';
+                TimeSide = 'right';
+
+            }
+
+            var divChat = '<div class="direct-chat-msg ' + Side + '">' +
+                '<div class="direct-chat-info clearfix">' +
+                '<span class="direct-chat-name pull-' + Side + '">' + userName + '</span>' +
+                '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + time + '</span>' +
+                '</div>' +
+
+                ' <img class="direct-chat-img" src="' + userimg + '" alt="Message User Image">' +
+                ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+            $('#divChatWindow').append(divChat);
+
+            var height = $('#divChatWindow')[0].scrollHeight;
+            $('#divChatWindow').scrollTop(height);
+
+        }
+
+        // Creation and Opening Private Chat Div
+        function OpenPrivateChatBox(chatHub, userId, ctrId, userName) {
+
+            var PWClass = $('#PWCount').val();
+
+            if ($('#PWCount').val() == 'info')
+                PWClass = 'danger';
+            else if ($('#PWCount').val() == 'danger')
+                PWClass = 'warning';
+            else
+                PWClass = 'info';
+            if ($('#' + ctrId).length) {
+                // alert('Found with Length');
+            }
+            else {
+                $('#PWCount').val(PWClass);
+                debugger;
+                var idnew = ctrId + '_JK';
+                var div1 = ' <div id= "' + idnew + '" class="col-md-3"> <div  id="' + ctrId + '" class="box box-solid box-' + PWClass + ' direct-chat direct-chat-' + PWClass + '">' +
+                    '<div class="box-header with-border">' +
+                    ' <h3 class="box-title">' + userName + '</h3>' +
+
+                    ' <div class="box-tools pull-right">' +
+                    ' <span data-toggle="tooltip" id="MsgCountP" title="0 New Messages" class="badge bg-' + PWClass + '">0</span>' +
+                    ' <button type="button" class="btn-box-tool" data-widget="collapse">' +
+                    '    <i class="fa fa-minus"></i>' +
+                    '  </button>' +
+                    '  <button id="imgDelete" type="button" class="btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button></div></div>' +
+
+                    ' <div class="box-body">' +
+                    ' <div id="divMessage" class="direct-chat-messages">' +
+
+                    ' </div>' +
+
+                    '  </div>' +
+                    '  <div class="box-footer">' +
+
+
+                    '    <input type="text" id="txtPrivateMessage" name="message" placeholder="Type Message ..." class="form-control-chat"  />' +
+
+                    '  <div class="input-group">' +
+                    '    <input type="text" name="message" placeholder="Type Message ..." class="form-control-hidden" style="visibility:hidden;" />' +
+                    '   <span class="input-group-btn">' +
+                    '          <input type="button" id="btnSendMessage" class="btn-' + PWClass + ' btn-flat" value="send" />' +
+                    '   </span>' +
+                    '  </div>' +
+
+                    ' </div>' +
+                    ' </div></div>';
+                var $div = $(div1);
+            }
+            // Closing Private Chat Box
+            $div.find('#imgDelete').click(function () {
+                $('#' + ctrId).remove();
+                $('#' + ctrId + '_JK').remove();
+            });
+
+            // Send Button event in Private Chat
+            $div.find("#btnSendMessage").click(function () {
+
+                $textBox = $div.find("#txtPrivateMessage");
+
+                var msg = $textBox.val();
+                if (msg.length > 0) {
+                    chatHub.server.sendPrivateMessage(userId, msg);
+                    $textBox.val('');
+                }
+            });
+
+            // Text Box event on Enter Button
+            $div.find("#txtPrivateMessage").keypress(function (e) {
+                if (e.which == 13) {
+                    $div.find("#btnSendMessage").click();
+                }
+            });
+
+            // Clear Message Count on Mouse over           
+            $div.find("#divMessage").mouseover(function () {
+
+                $("#MsgCountP").html('0');
+                $("#MsgCountP").attr("title", '0 New Messages');
+            });
+            // Append private chat div inside the main div
+            $('#PriChatDiv').append($div);
+        }
+    </script>
+<!--End of Dynamic Chat bot files-->
+<script type="text/javascript">
+    Redirect();
+
+    function HideShowBoat() {
+        Redirect();
+        document.getElementById("assistanceboat").style.display = "none";
+    }
+
+    function dispalyHide() {
+        debugger;
+        document.getElementById("lvchat").style.display = "none";
+        document.getElementById("iconchat").style.display = "block";
+        document.getElementById("assistanceboat").style.display = "none";
+      //  //document.getElementById("iframe1").style.display = "none";
+      //  doccument.getElementById("lvchat").style.display = "none";
+      //  document.getElementById("iconchat").style.display = "none";
+      //  //doument.getElementById("minus").style.display = 'none';
+      ////document.getElementById("plus").style.display = 'block';
+      //  document.getElementById("assistanceboat").style.display = "none";
+    }
+
+    function dispalyShow() {
+        debugger;
+        document.getElementById("lvchat").style.display = "block";
+       // document.getElementById("iframe1").style.display = "block";
+        document.getElementById("minus").style.display = "block";
+        document.getElementById("plus").style.display = "none";
+        document.getElementById("iconchat").style.display = "none";
+        document.getElementById("assistanceboat").style.display = "none";
+        document.getElementById("DDD").style.display = "block";
+    }
+
+    function displayClose() {
+        debugger;
+        document.getElementById("lvchat").style.display = "none";
+        document.getElementById("iconchat").style.display = "block";
+        document.getElementById("assistanceboat").style.display = "none";
+        document.getElementById("DDD").style.display = "none";
+    }
+</script>
+
+
+</html>

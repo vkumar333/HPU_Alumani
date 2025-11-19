@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Alumni_Registration_Details>
+    <pk_alumniid>1569</pk_alumniid>
+    <alumnino>HPU/2025/1569</alumnino>
+    <ASal>Mr.</ASal>
+    <Name>Sharma</Name>
+    <FSal>Mr.</FSal>
+    <fathername>Satish</fathername>
+    <MSal>Mrs.</MSal>
+    <mothername>Maina</mothername>
+    <dob>01/01/1969</dob>
+    <alumnitypess>ExStu</alumnitypess>
+    <yearofpassing>2014</yearofpassing>
+    <alumnitype>ExStudent</alumnitype>
+    <alumniMemtype>Life-time Membership</alumniMemtype>
+    <isMentor>NO </isMentor>
+    <email>test2@gmail.com</email>
+    <gender>Male</gender>
+    <Mobile_no>8935324573</Mobile_no>
+    <Per_address>kalindi kunj</Per_address>
+    <Currentaddress>kalindi kunj</Currentaddress>
+    <Currentoccupation>expediens</Currentoccupation>
+    <Special_interest>.net</Special_interest>
+    <Achievement>Outstanding</Achievement>
+    <Designation>master</Designation>
+    <DegreeName>B.Tech. in Electrical Engineering</DegreeName>
+    <DegreeDisplay>B.Tech.</DegreeDisplay>
+    <Subjects>Electrical Engineering</Subjects>
+    <Departments>Biotechnology</Departments>
+    <PaymentMode>Offline</PaymentMode>
+    <TransactionID>0</TransactionID>
+    <Amount>0.00</Amount>
+    <TransactionStatus>0</TransactionStatus>
+    <RegsDate>16/01/2025</RegsDate>
+    <isOldAlm>false</isOldAlm>
+    <isOld>NO</isOld>
+    <Remarks>Remarks</Remarks>
+    <isDisabled>Yes  </isDisabled>
+    <isDisabilityPercentage>Yes  </isDisabilityPercentage>
+    <disabiltyRemarks>test abhishek</disabiltyRemarks>
+    <fileUrlAlmDoc />
+    <fileUrlDisDoc />
+  </Alumni_Registration_Details>
+  <Company_Details>
+    <pk_clientid>1</pk_clientid>
+    <compcode>HPU</compcode>
+    <contactperson>ABC</contactperson>
+    <compname>Himachal Pradesh University,Shimla</compname>
+    <creationdate>2016-05-31T00:00:00+05:30</creationdate>
+    <email>Cashsection15@gmail.com</email>
+    <faxno>+91-(0177)-2830775</faxno>
+    <phone>01772833495,93</phone>
+    <address1>Himachal Pradesh University Summer Hill, Shimla-171005</address1>
+    <noofUsers>2000</noofUsers>
+    <noofLocations>31</noofLocations>
+    <active>true</active>
+    <SubHeading1>NAAC Accredited "A" Grade University</SubHeading1>
+    <SubHeading2>Accounts-I Branch</SubHeading2>
+    <SubHeading3>Summer- Hill Shimla-171005</SubHeading3>
+    <TAN_No>PTLH10638F</TAN_No>
+  </Company_Details>
+</NewDataSet>
