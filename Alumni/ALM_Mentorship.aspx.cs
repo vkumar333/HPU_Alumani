@@ -654,7 +654,7 @@ public partial class Alumni_ALM_Mentorship : System.Web.UI.Page
             {
                 if (Session["AlumniID"].ToString() != "")
                 {
-                    List<MentorRequest> mentorRequests = getMentorshipRequestsV();
+                    List<MentorRequest1> mentorRequests = getMentorshipRequestsV();
                     rptMR.DataSource = mentorRequests;
                     rptMR.DataBind();
                 }
@@ -666,9 +666,9 @@ public partial class Alumni_ALM_Mentorship : System.Web.UI.Page
         }
     }
 
-    public List<MentorRequest> getMentorshipRequestsV()
+    public List<MentorRequest1> getMentorshipRequestsV()
     {
-        List<MentorRequest> listRequests = new List<MentorRequest>();
+        List<MentorRequest1> listRequests = new List<MentorRequest1>();
 
         string userSessionAlumniID = Session["AlumniID"] != null ? Session["AlumniID"].ToString() : "0";
 
@@ -679,7 +679,7 @@ public partial class Alumni_ALM_Mentorship : System.Web.UI.Page
         {
             foreach (DataRow drMR in dsS.Tables[0].Rows)
             {
-                MentorRequest objMR = new MentorRequest();
+                MentorRequest1 objMR = new MentorRequest1();
                 objMR.pk_MReqID = Convert.ToInt32(drMR["pk_MReqID"]);
                 objMR.senderID = Convert.ToInt32(drMR["senderID"].ToString());
                 objMR.senderName = drMR["senderName"].ToString();
@@ -754,7 +754,7 @@ public partial class Alumni_ALM_Mentorship : System.Web.UI.Page
             {
                 if (Session["AlumniID"].ToString() != "")
                 {
-                    List<MentorRequest> mentorRequests = GetMentorRequestsV();
+                    List<MentorRequest1> mentorRequests = GetMentorRequestsV();
                     rptMR.DataSource = mentorRequests;
                     rptMR.DataBind();
                 }
@@ -766,9 +766,9 @@ public partial class Alumni_ALM_Mentorship : System.Web.UI.Page
         }
     }
 
-    public List<MentorRequest> GetMentorRequestsV()
+    public List<MentorRequest1> GetMentorRequestsV()
     {
-        List<MentorRequest> listRequests = new List<MentorRequest>();
+        List<MentorRequest1> listRequests = new List<MentorRequest1>();
 
         string userSessionAlumniID = Session["AlumniID"] != null ? Session["AlumniID"].ToString() : "0";
 
@@ -779,7 +779,7 @@ public partial class Alumni_ALM_Mentorship : System.Web.UI.Page
         {
             foreach (DataRow drMR in dsS.Tables[0].Rows)
             {
-                MentorRequest objMR = new MentorRequest();
+                MentorRequest1 objMR = new MentorRequest1();
                 objMR.pk_MReqID = Convert.ToInt32(drMR["pk_MReqID"]);
                 objMR.senderID = Convert.ToInt32(drMR["senderID"].ToString());
                 objMR.senderName = drMR["senderName"].ToString();
@@ -864,7 +864,7 @@ public class MenteeRequest
     public bool isSendMsgNow { get; set; }
     public bool isAccepted { get; set; }
 }
-public class MentorRequest
+public class MentorRequest1
 {
     public Int32 pk_MsgID { get; set; }
     public string messageText { get; set; }

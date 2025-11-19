@@ -1,17 +1,25 @@
 using System;
-using System.Data;
 using System.Collections;
+using System.Data;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
-using System.IO;
-using DataAccessLayer;
-using System.Linq;
-using SubSonic;
-using System.Text.RegularExpressions;
-using CuteWebUI;
 using System.Web.UI.WebControls;
 using CrystalDecisions.CrystalReports.Engine;
-using System.Net;
+using CuteWebUI;
+using DataAccessLayer;
+using DocumentFormat.OpenXml.Office2010.PowerPoint;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using SubSonic;
+
+
+
 
 public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
 {
@@ -149,7 +157,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
             Drp_Alumni_Name.DataTextField = "Salutation_Name";
             Drp_Alumni_Name.DataSource = ds;
             Drp_Alumni_Name.DataBind();
-            Drp_Alumni_Name.Items.Insert(0, new ListItem("- Title -", "0"));
+            Drp_Alumni_Name.Items.Insert(0, new System.Web.UI.WebControls.ListItem("- Title -", "0"));
 
             //Drp_FatherName.DataValueField = "PK_Salutation_ID";
             //Drp_FatherName.DataTextField = "Salutation_Name";
@@ -1568,6 +1576,62 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
         }
     }
 
+    //protected void ViewReport()
+    //{
+    //    try
+    //    {
+    //        lblMsg.Text = "";
+    //        ReportDocument objRptDoc = new ReportDocument();
+    //        string filename = "";
+
+    //        try
+    //        {
+    //            int alumniId = 0;
+
+    //            if (Session["AlumniID"].ToString() == null || Session["AlumniID"].ToString() == "")
+    //                alumniId = Convert.ToInt32(Session["EmpView_AlumniID"].ToString());
+    //            else
+    //                alumniId = Convert.ToInt32(Session["AlumniID"].ToString());
+
+    //            //DataSet dsAR = ALM_SP_AlumniRegistration_Details_Report_Print_By_Alumni(alumniId).GetDataSet();
+    //            DataSet dsAR = ALM_SP_AlumniRegistrationDetails_Print_Report(alumniId).GetDataSet();
+
+    //            if (dsAR.Tables[0].Rows.Count > 0)
+    //            {
+    //                dsAR.Tables[0].TableName = "Alumni_Registration_Details";
+    //                dsAR.Tables[1].TableName = "Company_Details";
+    //                dsAR.Tables[2].TableName = "Qualifications_Details";
+    //                //dsAR.WriteXml(Server.MapPath("~/Alumni/ALM_XML/Alumni_Registration_Details_Report.xml"));
+    //                filename = Server.MapPath("~/Alumni/ALM_Reports/Alumni_Registration_Details_Report.rpt");
+    //                objRptDoc.Load(filename);
+    //                objRptDoc.SetDataSource(dsAR);
+
+    //                objRptDoc.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, true, "Alumni Registration Details Report");
+    //            }
+    //            else
+    //            {
+    //                lblMsg.Text = "No Records Found!";
+    //            }
+    //        }
+    //        catch (System.Data.SqlClient.SqlException ex)
+    //        {
+    //            lblMsg.Text = CommonCode.ExceptionMessage.SqlExceptionHandling(ex.Message);
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            lblMsg.Text = CommonCode.ExceptionMessage.SqlExceptionHandling(ex.Message);
+    //        }
+    //        finally
+    //        {
+    //            objRptDoc.Close();
+    //            objRptDoc.Dispose();
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        lblMsg.Text = ex.Message;
+    //    }
+    //}
     protected void ViewReport()
     {
         try
@@ -1943,7 +2007,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
                 ddlDegree.DataTextField = "degree";
                 ddlDegree.DataSource = ds;
                 ddlDegree.DataBind();
-                ddlDegree.Items.Insert(0, new ListItem("-- Select Degree --", "0"));
+                ddlDegree.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Degree --", "0"));
             }
             else
             {
@@ -1966,7 +2030,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
                 ddlPassingYear.DataTextField = "PassYear_Name";
                 ddlPassingYear.DataValueField = "Pk_pass_id";
                 ddlPassingYear.DataBind();
-                ddlPassingYear.Items.Insert(0, new ListItem("-- Select Passing Year -- ", "0"));
+                ddlPassingYear.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Passing Year -- ", "0"));
             }
             else
             {
@@ -1987,7 +2051,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
                 ddlDepartment.DataTextField = "description";
                 ddlDepartment.DataSource = ds;
                 ddlDepartment.DataBind();
-                ddlDepartment.Items.Insert(0, new ListItem("-- Select Department --", "0"));
+                ddlDepartment.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Department --", "0"));
             }
             else
             {
@@ -2080,7 +2144,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
             ddlSubject.DataValueField = "pk_subjectid";
             ddlSubject.DataSource = ds1;
             ddlSubject.DataBind();
-            ddlSubject.Items.Insert(0, new ListItem("-- Select Subject --", "0"));
+            ddlSubject.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Subject --", "0"));
         }
 
         // Re-bind dropdowns for all rows
@@ -2282,7 +2346,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
                             ddlSubject.DataValueField = "pk_subjectid";
                             ddlSubject.DataSource = dsSub;
                             ddlSubject.DataBind();
-                            ddlSubject.Items.Insert(0, new ListItem("-- Select Subject --", "0"));
+                            ddlSubject.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Subject --", "0"));
                         }
 
                         if (ddlSubject.Items.FindByValue(subjectId) != null)
@@ -2360,7 +2424,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
                 ddlDegree.DataValueField = "pk_degreeid";
                 ddlDegree.DataSource = dtDegrees;
                 ddlDegree.DataBind();
-                ddlDegree.Items.Insert(0, new ListItem("-- Select Degree --", "0"));
+                ddlDegree.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Degree --", "0"));
             }
 
             // Passing year dropdown
@@ -2371,7 +2435,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
                 ddlPassingYear.DataValueField = "PK_Pass_ID";
                 ddlPassingYear.DataSource = dtYears;
                 ddlPassingYear.DataBind();
-                ddlPassingYear.Items.Insert(0, new ListItem("-- Select Passing Year --", "0"));
+                ddlPassingYear.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Passing Year --", "0"));
             }
 
             // Department dropdown
@@ -2382,7 +2446,7 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
                 ddlDepartment.DataValueField = "Pk_deptId";
                 ddlDepartment.DataSource = dtDepts;
                 ddlDepartment.DataBind();
-                ddlDepartment.Items.Insert(0, new ListItem("-- Select Department --", "0"));
+                ddlDepartment.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Department --", "0"));
             }
             Anthem.Manager.IncludePageScripts = true;
         }
@@ -2430,12 +2494,12 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
             subjectDropdown.DataTextField = "subject";
             subjectDropdown.DataValueField = "pk_subjectid";
             subjectDropdown.DataBind();
-            subjectDropdown.Items.Insert(0, new ListItem("-- Select Subject --", "0"));
+            subjectDropdown.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select Subject --", "0"));
         }
         else
         {
             subjectDropdown.Items.Clear();
-            subjectDropdown.Items.Add(new ListItem("-- Select Subject --", "0"));
+            subjectDropdown.Items.Add(new System.Web.UI.WebControls.ListItem("-- Select Subject --", "0"));
         }
         Anthem.Manager.IncludePageScripts = true;
     }
@@ -2589,5 +2653,373 @@ public partial class Alumni_ALM_AlumniProfileShow : System.Web.UI.Page
         return sp;
     }
 
+    // --- PATCH: BaseColor fully qualified to fix CS0246 ---
+
+    // Inside ViewReportITextSharp()
+    //protected void ViewReportITextSharp()
+    //{
+    //    lblMsg.Text = "";
+    //    MemoryStream ms = null;
+    //    Document doc = null;
+    //    try
+    //    {
+    //        int alumniId = 0;
+    //        if (Session["AlumniID"].ToString() == null || Session["AlumniID"].ToString() == "")
+    //            alumniId = Convert.ToInt32(Session["EmpView_AlumniID"].ToString());
+    //        else
+    //            alumniId = Convert.ToInt32(Session["AlumniID"].ToString());
+
+    //        DataSet dsAR = ALM_SP_AlumniRegistrationDetails_Print_Report(alumniId).GetDataSet();
+
+    //        if (dsAR == null || dsAR.Tables.Count == 0 || dsAR.Tables[0].Rows.Count == 0)
+    //        {
+    //            lblMsg.Text = "No Records Found!";
+    //            return;
+    //        }
+
+    //        dsAR.Tables[0].TableName = "Alumni_Registration_Details";
+    //        if (dsAR.Tables.Count > 1) dsAR.Tables[1].TableName = "Company_Details";
+    //        if (dsAR.Tables.Count > 2) dsAR.Tables[2].TableName = "Qualifications_Details";
+
+    //        ms = new MemoryStream();
+    //        doc = new Document(PageSize.A4, 32f, 32f, 40f, 40f);
+    //        PdfWriter writer = PdfWriter.GetInstance(doc, ms);
+    //        writer.CloseStream = false;
+    //        doc.AddAuthor("Alumni Portal");
+    //        doc.AddTitle("Alumni Registration Details Report");
+    //        doc.AddCreationDate();
+    //        doc.Open();
+
+    //        // Fonts (BaseColor fully qualified)
+    //        var fontTitle = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16, iTextSharp.text.Color.BLACK);
+    //        var fontSection = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, iTextSharp.text.Color.BLACK);
+    //        var fontHeader = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 9, iTextSharp.text.Color.WHITE);
+    //        var fontCell = FontFactory.GetFont(FontFactory.HELVETICA, 9, iTextSharp.text.Color.BLACK);
+
+    //        Paragraph title = new Paragraph("Alumni Registration Details Report", fontTitle)
+    //        {
+    //            Alignment = Element.ALIGN_CENTER,
+    //            SpacingAfter = 10f
+    //        };
+    //        doc.Add(title);
+
+    //        Paragraph generated = new Paragraph("Generated On: " + DateTime.Now.ToString("dd-MMM-yyyy HH:mm:ss", CultureInfo.InvariantCulture), fontCell)
+    //        {
+    //            Alignment = Element.ALIGN_RIGHT,
+    //            SpacingAfter = 10f
+    //        };
+    //        doc.Add(generated);
+
+    //        doc.Add(new Paragraph("Alumni Details", fontSection) { SpacingAfter = 6f });
+    //        PdfPTable alumniTable = BuildKeyValueTable(dsAR.Tables["Alumni_Registration_Details"], fontHeader, fontCell);
+    //        doc.Add(alumniTable);
+    //        doc.Add(Chunk.NEWLINE);
+
+    //        if (dsAR.Tables.Contains("Company_Details") && dsAR.Tables["Company_Details"].Rows.Count > 0)
+    //        {
+    //            doc.Add(new Paragraph("Company Details", fontSection) { SpacingAfter = 6f });
+    //            PdfPTable companyTable = BuildFullTable(dsAR.Tables["Company_Details"], fontHeader, fontCell);
+    //            doc.Add(companyTable);
+    //            doc.Add(Chunk.NEWLINE);
+    //        }
+
+    //        if (dsAR.Tables.Contains("Qualifications_Details") && dsAR.Tables["Qualifications_Details"].Rows.Count > 0)
+    //        {
+    //            doc.Add(new Paragraph("Qualifications", fontSection) { SpacingAfter = 6f });
+    //            PdfPTable qualTable = BuildFullTable(dsAR.Tables["Qualifications_Details"], fontHeader, fontCell);
+    //            doc.Add(qualTable);
+    //            doc.Add(Chunk.NEWLINE);
+    //        }
+
+    //        TryAddProfileImage(dsAR.Tables["Alumni_Registration_Details"], doc);
+
+    //        doc.Close();
+
+    //        Response.Clear();
+    //        Response.ContentType = "application/pdf";
+    //        Response.AddHeader("Content-Disposition", "attachment; filename=Alumni_Registration_Details_Report.pdf");
+    //        Response.Cache.SetCacheability(HttpCacheability.NoCache);
+    //        ms.Position = 0;
+    //        ms.WriteTo(Response.OutputStream);
+    //        Response.Flush();
+    //        Response.End();
+    //    }
+    //    catch (System.Data.SqlClient.SqlException ex)
+    //    {
+    //        lblMsg.Text = CommonCode.ExceptionMessage.SqlExceptionHandling(ex.Message);
+    //    }
+    //    catch (ThreadAbortException)
+    //    {
+    //        // Ignore
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        lblMsg.Text = CommonCode.ExceptionMessage.SqlExceptionHandling(ex.Message);
+    //    }
+    //    finally
+    //    {
+    //        if (doc != null)
+    //        {
+    //            if (doc.IsOpen())
+    //                doc.Close();
+
+    //            doc.Dispose();   // if doc implements IDisposable
+    //        }
+
+    //        ms?.Dispose();
+    //    }
+    //}
+    protected void ViewReportITextSharp()
+    {
+        lblMsg.Text = "";
+        MemoryStream ms = null;
+        Document doc = null;
+
+        try
+        {
+            int alumniId = 0;
+
+            var alumniSession = Session["AlumniID"];
+            if (alumniSession == null || string.IsNullOrWhiteSpace(alumniSession.ToString()))
+                alumniId = Convert.ToInt32(Session["EmpView_AlumniID"]);
+            else
+                alumniId = Convert.ToInt32(alumniSession);
+
+            DataSet dsAR = ALM_SP_AlumniRegistrationDetails_Print_Report(alumniId).GetDataSet();
+
+            if (dsAR == null || dsAR.Tables.Count == 0 || dsAR.Tables[0].Rows.Count == 0)
+            {
+                lblMsg.Text = "No Records Found!";
+                return;
+            }
+
+            dsAR.Tables[0].TableName = "Alumni_Registration_Details";
+            if (dsAR.Tables.Count > 1) dsAR.Tables[1].TableName = "Company_Details";
+            if (dsAR.Tables.Count > 2) dsAR.Tables[2].TableName = "Qualifications_Details";
+
+            ms = new MemoryStream();
+            doc = new Document(PageSize.A4, 32f, 32f, 40f, 40f);
+
+            PdfWriter writer = PdfWriter.GetInstance(doc, ms);
+            writer.CloseStream = false;
+
+            doc.AddAuthor("Alumni Portal");
+            doc.AddTitle("Alumni Registration Details Report");
+            doc.AddCreationDate();
+            doc.Open();
+
+            // Font Colors using iTextSharp.text.Color (compatible with 4.x/5.x)
+            var fontTitle = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16, Color.BLACK);
+            var fontSection = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, Color.BLACK);
+            var fontHeader = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 9, Color.WHITE);
+            var fontCell = FontFactory.GetFont(FontFactory.HELVETICA, 9, Color.BLACK);
+
+            Paragraph title = new Paragraph("Alumni Registration Details Report", fontTitle)
+            {
+                Alignment = Element.ALIGN_CENTER,
+                SpacingAfter = 10f
+            };
+            doc.Add(title);
+
+            Paragraph generated = new Paragraph(
+                "Generated On: " + DateTime.Now.ToString("dd-MMM-yyyy HH:mm:ss", CultureInfo.InvariantCulture),
+                fontCell
+            )
+            {
+                Alignment = Element.ALIGN_RIGHT,
+                SpacingAfter = 10f
+            };
+            doc.Add(generated);
+
+            // Alumni Table
+            doc.Add(new Paragraph("Alumni Details", fontSection) { SpacingAfter = 6f });
+            PdfPTable alumniTable = BuildKeyValueTable(dsAR.Tables["Alumni_Registration_Details"], fontHeader, fontCell);
+            doc.Add(alumniTable);
+            doc.Add(Chunk.NEWLINE);
+
+            // Company Details
+            if (dsAR.Tables.Contains("Company_Details") && dsAR.Tables["Company_Details"].Rows.Count > 0)
+            {
+                doc.Add(new Paragraph("Company Details", fontSection) { SpacingAfter = 6f });
+                PdfPTable companyTable = BuildFullTable(dsAR.Tables["Company_Details"], fontHeader, fontCell);
+                doc.Add(companyTable);
+                doc.Add(Chunk.NEWLINE);
+            }
+
+            // Qualifications
+            if (dsAR.Tables.Contains("Qualifications_Details") && dsAR.Tables["Qualifications_Details"].Rows.Count > 0)
+            {
+                doc.Add(new Paragraph("Qualifications", fontSection) { SpacingAfter = 6f });
+                PdfPTable qualTable = BuildFullTable(dsAR.Tables["Qualifications_Details"], fontHeader, fontCell);
+                doc.Add(qualTable);
+                doc.Add(Chunk.NEWLINE);
+            }
+
+            // Profile Image
+            TryAddProfileImage(dsAR.Tables["Alumni_Registration_Details"], doc);
+
+            doc.Close(); // Close PDF before writing to Response
+
+            // Write PDF to browser
+            Response.Clear();
+            Response.ContentType = "application/pdf";
+            Response.AddHeader("Content-Disposition", "attachment; filename=Alumni_Registration_Details_Report.pdf");
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+
+            ms.Position = 0;
+            ms.WriteTo(Response.OutputStream);
+            Response.Flush();
+
+            HttpContext.Current.ApplicationInstance.CompleteRequest(); // safer than Response.End()
+        }
+        catch (System.Data.SqlClient.SqlException ex)
+        {
+            lblMsg.Text = CommonCode.ExceptionMessage.SqlExceptionHandling(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            lblMsg.Text = CommonCode.ExceptionMessage.SqlExceptionHandling(ex.Message);
+        }
+        finally
+        {
+            // Safe cleanup: close Document if open, dispose MemoryStream
+            try
+            {
+                if (doc != null && doc.IsOpen())
+                    doc.Close();
+            }
+            catch { }
+
+            ms.Dispose();
+        }
+    }
+
+    // BuildKeyValueTable patch (BaseColor fully qualified)
+    private PdfPTable BuildKeyValueTable(DataTable dt, Font fontHeader, Font fontCell)
+    {
+        PdfPTable table = new PdfPTable(2) { WidthPercentage = 100f };
+        table.SetWidths(new float[] { 30f, 70f });
+
+        if (dt.Rows.Count == 0) return table;
+        DataRow row = dt.Rows[0];
+
+        foreach (DataColumn col in dt.Columns)
+        {
+            if (IsSkippable(col.ColumnName)) continue;
+            PdfPCell header = new PdfPCell(new Phrase(NormalizeHeader(col.ColumnName), fontHeader))
+            {
+                BackgroundColor = new iTextSharp.text.Color(60, 120, 180),
+                Padding = 4f
+            };
+            PdfPCell value = new PdfPCell(new Phrase(Convert.ToString(row[col]) ?? "", fontCell))
+            {
+                Padding = 4f
+            };
+            table.AddCell(header);
+            table.AddCell(value);
+        }
+        return table;
+    }
+
+    // BuildFullTable patch (BaseColor fully qualified)
+    private PdfPTable BuildFullTable(DataTable dt, Font fontHeader, Font fontCell)
+    {
+        PdfPTable table = new PdfPTable(dt.Columns.Count) { WidthPercentage = 100f };
+        float[] widths = Enumerable.Repeat(1f, dt.Columns.Count).ToArray();
+        table.SetWidths(widths);
+
+        foreach (DataColumn col in dt.Columns)
+        {
+            PdfPCell header = new PdfPCell(new Phrase(NormalizeHeader(col.ColumnName), fontHeader))
+            {
+                BackgroundColor = new iTextSharp.text.Color(60, 120, 180),
+                Padding = 4f,
+                HorizontalAlignment = Element.ALIGN_CENTER
+            };
+            table.AddCell(header);
+        }
+
+        foreach (DataRow dr in dt.Rows)
+        {
+            foreach (DataColumn col in dt.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(Convert.ToString(dr[col]) ?? "", fontCell))
+                {
+                    Padding = 4f
+                };
+                table.AddCell(cell);
+            }
+        }
+        return table;
+    }
+
+    private bool IsSkippable(string columnName)
+    {
+        // Adjust if there are internal columns you don't want in key/value section
+        string[] skip =
+        {
+            "password", "File_Path", "Files_Unique_Name", "Fk_alumniid"
+        };
+        return skip.Contains(columnName, StringComparer.OrdinalIgnoreCase);
+    }
+
+    private string NormalizeHeader(string raw)
+    {
+        // Simple header normalization (e.g., alumni_name -> Alumni Name)
+        if (string.IsNullOrEmpty(raw)) return "";
+        string[] parts = raw.Replace("_", " ").Split(' ');
+        return string.Join(" ", parts.Select(p =>
+        {
+            if (p.Length == 0) return p;
+            if (p.Length == 1) return p.ToUpperInvariant();
+            return char.ToUpperInvariant(p[0]) + p.Substring(1).ToLowerInvariant();
+        }));
+    }
+
+    private void TryAddProfileImage(DataTable alumniTable, Document doc)
+    {
+        try
+        {
+            if (alumniTable == null || alumniTable.Rows.Count == 0) return;
+
+            // Expect column name like profile image unique file name; adjust if different
+            string[] candidateCols = { "ProfileImage", "Files_Unique_Name", "Profile_Pic", "Photo" };
+            string colName = candidateCols.FirstOrDefault(c => alumniTable.Columns.Contains(c));
+            if (colName == null) return;
+
+            string fileUnique = Convert.ToString(alumniTable.Rows[0][colName]);
+            if (string.IsNullOrWhiteSpace(fileUnique)) return;
+
+            string baseUrl = ReturnPath(); // Existing helper
+            string imgUrl = baseUrl + "/Alumni/StuImage/" + fileUnique;
+
+            // Download into memory if reachable
+            using (var client = new System.Net.WebClient())
+            {
+                byte[] imgBytes = client.DownloadData(imgUrl);
+                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(imgBytes);
+                img.Alignment = Element.ALIGN_RIGHT;
+                img.ScaleToFit(120f, 120f);
+                img.SpacingBefore = 10f;
+                img.SpacingAfter = 10f;
+                doc.Add(img);
+            }
+        }
+        catch
+        {
+            // Ignore image failures silently
+        }
+    }
+
+    // Optional new button handler
+    protected void btnPrintITextSharp_Click(object sender, EventArgs e)
+    {
+        ViewReportITextSharp();
+    }
     #endregion
+
+    protected void BtnCopilot_Click(object sender, EventArgs e)
+    {
+        ViewReportITextSharp();
+    }
 }

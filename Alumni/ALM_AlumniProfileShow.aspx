@@ -556,6 +556,7 @@
                                 <Anthem:Button ID="btnRegister" OnClick="btnRegister_Click" class="logbutt" runat="server" TextDuringCallBack="UPDATING....." AutoUpdateAfterCallBack="True" Text="REGISTER" PreCallBackFunction="btnRegister_PreCallBack" OnClientClick="return validateEmail();" />
                                 <Anthem:Button ID="btnback" runat="server" AutoUpdateAfterCallBack="true" Text="BACK" TextDuringCallBack="SUBMITING..." EnableCallBack="false" OnClick="btnback_Click" />
                                 <Anthem:Button ID="btnPrint" runat="server" Text="PRINT" AutoUpdateAfterCallBack="true" CommandName="PRINT" OnClick="btnPrint_Click" Class="logbutt" EnableCallBack="false" />
+                                 <Anthem:Button ID="BtnCopilot" runat="server" Text="PDF PRINT" AutoUpdateAfterCallBack="true" CommandName="PDFPRINT" OnClick="BtnCopilot_Click" Class="logbutt" EnableCallBack="false" />
                                 <Anthem:Label ID="lblMsg" runat="server" AutoUpdateAfterCallBack="True" CssClass="lblmessage"></Anthem:Label>
                                 <Anthem:Label ID="lblOnlineFees" runat="server" AutoUpdateAfterCallBack="true" Visible="false"></Anthem:Label>
                                 <Anthem:HiddenField ID="hdnId" runat="server" AutoUpdateAfterCallBack="true" Visible="false"></Anthem:HiddenField>
